@@ -12,5 +12,3 @@ https://thephpleague.com
 
 https://github.com/lrobeson/patternlab-101
 
-https://lornajane.net/posts/2012/building-a-restful-php-server-routing-the-request
-
