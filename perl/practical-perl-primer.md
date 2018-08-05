@@ -13,7 +13,7 @@ perldoc -f chomp # perldoc on chomp
 perldoc perlfaq
 ```
 
-    
+​    
 
 Misc
 
