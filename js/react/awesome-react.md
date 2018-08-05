@@ -9,6 +9,3 @@ draft: true
 https://popmotion.io/pose
 
 https://www.styled-components.com
-
-
-

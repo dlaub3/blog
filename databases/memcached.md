@@ -21,7 +21,7 @@ set key
 add key
 delete key
 
-flush_all 10
+flush_all
 quit
 ```
 

@@ -1,7 +1,7 @@
 ---
 title: "Bash"
 date: 2018-07-29
-tags: ["bash", "jot"]			
+tags: ["bash", "jot"]		
 ---
 
 
