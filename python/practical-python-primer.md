@@ -8,9 +8,6 @@ Categories: ["python"]
 
 Python was developed by Dutch mathematician Guido van Rossum who  is still the principle author and considered the BDFL (Benevolent Dictator for Life).
 
-<script src="https://gist.github.com/dlaub3/ebc21c3bf3506432094ee9ae1d78f3d9.js"></script>
-
-
 
 ### [The Zen of Python](https://www.python.org/dev/peps/pep-0020/#id3)  
 
