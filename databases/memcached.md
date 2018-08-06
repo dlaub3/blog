@@ -2,6 +2,7 @@
 title: "Memcashed"
 date: 2018-07-29
 tags: ["memcached", "jot"]	
+description: "Absolute basics of memcached"
 ---
 
 https://memcached.org
