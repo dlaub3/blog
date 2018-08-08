@@ -136,7 +136,7 @@ A tupal is not mutable.
 ```python
 x = (1,2,3,4,5) # tupal
 x = [1,2,3,4,5] # list
-x = [1, 'two', 3, 5];
+x = [1, 'two', 3, 5]
 
 if isinstance(x, tuple):
     print("tupal")
@@ -153,10 +153,10 @@ A dictionary is analogous to a hash.
 The values can be any type but the key must be immutable -- strings and numbers.
 
 ```python
-dictionary = { 'one': 1, 'two': 2, 'three':3 };
+dictionary = { 'one': 1, 'two': 2, 'three':3 }
 
 # OR 
-dictionary = dict( one =  1, two = 2, three = 3);
+dictionary = dict( one =  1, two = 2, three = 3)
                   
 print(dictionary['one']) # this will cause an exeption if a key doesn't exist so 
 # so use .get
@@ -171,7 +171,7 @@ print('one' in dictionary)
 A set is like a list but doesn't allow duplicate elements. 
 
 ```python
-set = set("this is a set");
+set = set("this is a set")
 print(sorted(set))
 ```
 
@@ -220,7 +220,7 @@ is not
 
 y = true
 x = 1 if y else 2 # Ternary if in python
-print(x);
+print(x)
 ```
 
 
@@ -238,28 +238,28 @@ https://docs.python.org/3/tutorial/controlflow.html?highlight=else
 
 x = 10
 while x <= 20:
-	x += 1;
-tupal = (1, 2, 3, 4, 5);
+	x += 1
+tupal = (1, 2, 3, 4, 5)
 for item in tupal: 
-	print(item);
+	print(item)
 
 
-numbers = [1, 2, 3, 4, 5];
+numbers = [1, 2, 3, 4, 5]
 
 for i in numbers: 
-	print(i);
+	print(i)
     
 # range(start, end, step)
 print(list(range(0, 100, 5)))
 
 x = list(range(1..25))
 for n in range(100): # or for n in range(2, n):
-    print(n);
+    print(n)
 
 # for with dictionary
-x = {'one':1, 'two': 2};
+x = {'one':1, 'two': 2}
 for k,v in x.items():
-    print('k: {}. v: {}'.format(k, v));  
+    print('k: {}. v: {}'.format(k, v))  
 ```
 
 
@@ -276,9 +276,9 @@ for k,v in x.items():
 
 
 # unary operators
-z = 4;
-z = -z;
-z = +z;
+z = 4
+z = -z
+z = +z
 ```
 
 
@@ -391,7 +391,7 @@ def function(n):
 function('Hello World!')
 
 def say(x = "Hello", y = "World"):
-	print(x, y);
+	print(x, y)
 say() 
 ```
 
@@ -488,7 +488,7 @@ def outer(maybedec):
    	def inner():
    		print("From Inner")
    	    maybedec()
-   	return inner;
+   	return inner
 
 closure = outer()
 closure()
@@ -539,14 +539,14 @@ Variables defined in a class are similar to static variables.
 
 ```python
 class Car:
-    x = 10; # class variable
+    x = 10 # class variable
     
     # can also pass kwargs to 
     # stay more organized
 	def __init__(self, wheels, speed, cost): # instance variables
-	self._wheels = wheels if wheels else 4;
-	self._speed = speed;
-	self._cost = cost;
+	self._wheels = wheels if wheels else 4
+	self._speed = speed
+	self._cost = cost
 	
     def speed(self):
         return self._speed
@@ -603,8 +603,8 @@ newstr = 'i have two' ' separate strings'
 
 str3 = str1 + ' ' + newstr
 
-num = 42;
-answer = 15;
+num = 42
+answer = 15
 
 print('the answer is {a}, not {n}'.format(a = answer, n = num))
 
@@ -635,7 +635,7 @@ https://docs.python.org/3/tutorial/inputoutput.html#reading-and-writing-files
  # 'w'
  # 'a' append
  # 'r+b' 'r+b' Binary/Text
-f = open('file.txt', 'r');
+f = open('file.txt', 'r')
 for line in f:
     print(line.rstrip())
     
