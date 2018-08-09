@@ -39,9 +39,9 @@ It is important to understand the relationship between encoding and character se
 
 
 
-I'm not sure how UTF-8 got it's name. Perhaps because it can be written in octal notation? 
+The '8' in UTF-8 refers to the fact that 8 is the minimum number of  bits required to store a character. Remember UTF-8 uses 1-4 bytes.  
 
-
+ 
 
 References 
 
