@@ -373,8 +373,9 @@ Functions are like functions and sub routines in other languages.  By default al
 
 Python doesn't support forward declaration. 
 
-> In computer programming, a **forward declaration** is a **declaration** of an identifier (denoting an entity such as a type, a variable, a constant, or a function) for which the programmer has not yet given a complete definition. [Forward Declaration](https://en.wikipedia.org/wiki/Forward_declaration)
+> In computer programming, a **forward declaration** is a **declaration** of an identifier (denoting an entity such as a type, a variable, a constant, or a function) for which the programmer has not yet given a complete definition. 
 >
+> <cite>[Forward Declaration](https://en.wikipedia.org/wiki/Forward_declaration)</cite>
 
 Default arguments are supported. The arguments with defaults should come last. 
 
