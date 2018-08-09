@@ -6,7 +6,7 @@ draft: false
 
 
 
-A **bit** is the smallest unit in computing. It is either a `1` or a `0` . Next up is a **byte**,  a byte is 8 bits. 256 (2^8) patterns can be represented by a byte. One byte can store the numbers 0 through 255 in decimal notation. It is `11111111` and is 8 bits in length. 
+A **bit** is the smallest unit in computing. It is either a `1` or a `0` . Next up is a **byte**,  a byte is 8 bits. 256 (2^8) patterns can be represented by a byte. One byte can store the numbers 0 through 255 in decimal notation. The number 255 is `11111111` and is 8 bits, one byte in length. 
 
 
 
