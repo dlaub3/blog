@@ -2,6 +2,7 @@
 title: "Practical Python Primer"
 date: 2018-07-28
 Categories: ["python"]
+description: "Basic Python language mechanics"
 ---
 
 

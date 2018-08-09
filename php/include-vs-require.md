@@ -2,6 +2,7 @@
 title: "Include VS Require"
 date: 2018-07-22
 Tags: ["PHP"]
+description: "What are the differences between include and require in PHP"
 ---
 
 

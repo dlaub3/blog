@@ -2,6 +2,7 @@
 title: "Practical Perl Primer"
 date: 2018-07-22
 tags: ["perl"]
+description: "Basic Perl language mechanics"
 ---
 
 
