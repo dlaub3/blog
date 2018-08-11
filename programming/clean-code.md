@@ -1,75 +1,108 @@
 ---
-title: "Clean Code"
-date: 2018-07-29T19:12:53-04:00
-draft: true
+title: "10 Principles for Clean Code"
+date: 2018-08-11
+draft: false
+description: "10 Principles for learning the art of writing clean code."
 ---
 
 
 
-General guidelines for writing clean code. 
-
-**DRY: ** Don't Repeat Yourself
+The ultimate goal is code that is easy to read, understand, and maintain. It's code that doesn't require tons of comments because it's so expressive on it's own. 
 
 
 
-**TED:** 
+#####   1. **Stay DRY**
 
-* Terse 
-* Expressive 
-* Do One Thing
+**DRY**: Don't Repeat Yourself
 
 
 
-Return Early: 
+#####   2. **Be TED**
 
-**BAD**
+**TED**: Terse, Expressive, Do One Thing
 
-```js
-function myFunction(x) {
-    y = x * 10;
-    if( x === 0 ) {
-        return 1;
-    }
+
+
+##### 3.  **Name things carefully**
+
+* Watch out for 'And', 'If', and 'Or' in your names, they indicate you're doing multiple things that could be separated.
+
+* Don't abbreviate names, it makes it more confusing later.
+
+* Booleans should sound like true/false questions: 'isAdmin', 'hasActiveAccount', etc.
+
+* Use positive conditionals `if (isNice)` not `if(!isNotNice)`
+
+* Use symmetrical or opposite variables when applicable: 'on/off', 'up/down', etc.
+
+* Good naming should convey intent, that way you don't need a comment to explain what the variable is used for. 
+
+  
+
+##### 4. Use mayfly variables
+
+Mayfly variables are short lived variables that only use memory when they are needed.
+
+
+
+##### 5. Use intermediate variables. 
+
+   ```js
+var nice = goodAttitute && niceToOthers && stillBelievesInSanta;
+if(nice) {
+    return getsPresents;
 }
-```
+   ```
 
 
+
+##### 6. **Keep things short**
+There are recommended maximum lengths for all of these.
+
+* Variable Names
+* Line Length
+* Methods/Functions
+* Classes 
+* Files 
+
+
+
+##### 7. Don't use magic numbers
+
+Magic number are numbers that don't mean anything on their own. They make the code harder to maintain.
+
+**Bad**
+
+   ```js
+if (employtee.type == '2'){}
+   ```
 
 **Good**
 
-```js
-function myFunction(x) {
-    if( x === 0 ) {
-        return 1;
-    }
-    y = x * 10;
-}
-```
+   ```js
+var manager = 2;
+if (employee.type == manager) {}
+   ```
+
+   
 
 
 
-
-
-Reduce Nested If Else Statements
+##### 8. Return Early
 
 **Bad**
 
 ```js
-if( x > 10) {
-    if(x > 20) {
-        return x / 2;
-    } else {
-        return x * 2;
+function myFunction(superbig) {
+    foreach item in superbig {
+       do longrunningtask
     }
     
-} else {
-    if (x > 5) {
-        return x * 2;
-    } else {
-        return x * 10
+    if( superbig[0] == false ) {
+        return;
     }
+    return results
 }
-
 ```
 
 
@@ -77,24 +110,80 @@ if( x > 10) {
 **Good**
 
 ```js
+function myFunction(superbig) {
+    if( superbig[0] == false ) {
+        return;
+    }
+    
+    foreach item in superbig {
+       do longrunningtask
+    }
+    return results
+}
+```
+
+
+
+
+
+##### 9. Reduce Nested If Else Statements
+
+Ideally, you would never nest if/else statements.
+
+**Bad**
+
+```js
 if(x > 20) {
-    return x / 2;
-}
-if (x > 10 ) {
-    
-}
-if( x > 10) {
-     else {
-        return x * 2;
+   if(x > 10 && x < 15) {
+    	return "almost there"
+	}else if(x < 10){
+    	if(x < 5) {
+    		return "good start"
+		}
+    } else{
+        return "doing better"
     }
-    
 } else {
-    if (x > 5) {
-        return x * 2;
-    } else {
-        return x * 10
-    }
-} >
+    return "you win"
+}
+```
+
+
+
+**Good**
+
+```js
+if(x < 5) {
+    return "good start"
+}
+if(x > 5 && x < 10) {
+    return "doing better"
+}
+if(x > 10 && x < 15) {
+    return "almost there"
+}
+if(x > 20) {
+    return "you win"
+}
+```
+
+
+
+##### 10. **Use Enums**
+
+Enums provide a mechanism for giving meaning to arbitrary data. Enums may not be part of the language you work with, but you can at least emulate their behavior. 
+
+```js
+var accountLevels = {
+    stadard: 300, 
+    bronze: 500,
+    gold: 800,
+    platinum: 1000
+};
+
+if(user.accountLevel > accountLevels.standard) {
+    enableMoreFeatures;
+}
 ```
 
 
@@ -103,9 +192,19 @@ if( x > 10) {
 
 
 
+##### References and Further Learning: 
 
+Clean Code Cheat Sheet
 
+https://www.bbv.ch/images/bbv/pdf/downloads/V2_Clean_Code_V3.pdf
 
+Uncle Bob's Clean Code
+
+https://www.safaribooksonline.com/live-training/courses/clean-code/0636920194538
+
+Cory House -- This post was based largely on Cory's course Writing Clean Code for Humans
+
+https://www.pluralsight.com/courses/writing-clean-code-humans
 
 
 
