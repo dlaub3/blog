@@ -1,5 +1,5 @@
 ---
-title: "Strict Data Types in PHP"
+title: "PHP Strict Data Types"
 date: 2018-07-22
 Tags: ["PHP"]
 description: "How to use strict data types in PHP"

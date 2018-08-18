@@ -84,7 +84,7 @@ Template literals preserve white space and line breaks. They also allow you to i
 ```javascript
 let add = (a) => { return (b) => (a + b) };
 let add5 = add(5);
-console.log((add5(15) === 20) ? 'true': 'false')
+console.log(add5(15) === 20);
 ```
 
 It does more than provide a cleaner syntax. It also helps the problem of ``` this```.  Arrow functions don't have their own ``` this```.  They inherit ``` this``` from the enclosing scope. 
