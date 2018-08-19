@@ -46,6 +46,7 @@ The '8' in UTF-8 refers to the fact that 8 is the minimum number of  bits requir
 References 
 
 - https://web.stanford.edu/class/cs101/bits-bytes.html
+- http://www.unicode.org/faq/utf_bom.html
 - https://www.w3schools.com/charsets/ref_html_ascii.asp
 - https://en.wikipedia.org/wiki/ASCII#7-bit_codes
 - https://stackoverflow.com/questions/10229156/how-many-characters-can-utf-8-encode
