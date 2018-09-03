@@ -21,7 +21,7 @@ HTTP is implemented on layer 7 of the [OSI Model](https://en.wikipedia.org/wiki/
 4. Transport
 5. Session
 6. Presentation
-7. Application. 
+7. **Application**
 
 This means that HTTP is an application layer protocol. It is a protocol that the web browser and web sever agree to use to communicate with one another. It is built on top of the [Transmission Control Protocal](https://en.wikipedia.org/wiki/Transmission_Control_Protocol) which is most commonly referred to as TCP. TCP is implemented on the transport layer of the [Internet Protocal Suite](https://en.wikipedia.org/wiki/Internet_protocol_suite) (TCP/IP), which is another model for understanding networking. The OSI model and TCP/IP are different ways of categorizing networking layers. 
 
@@ -65,7 +65,7 @@ Vary: Accept-Encoding
 
 
 
-This formatting of messages is all it takes to transform TCP into HTTP.  
+This formatting of messages is all it takes to transform TCP into HTTP. 
 
 
 
