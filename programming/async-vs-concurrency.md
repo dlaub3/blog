@@ -27,9 +27,7 @@ I spent some time recently considering how JavaScript's asynchronous execution c
 >
 > [Webster's Dictrionary](https://www.merriam-webster.com/dictionary/sequential)
 
-Code is read and executed in sequence, from the top of the file to the bottom. That does not mean that one line of code must finish execution before the next line of code can be read. But it does imply an order of operations.
-
-Obviously this code will produce the numbers 1 to 4 in order. 
+Code is read and executed in sequence, from the top of the file to the bottom. That does not mean that one line of code must finish execution before the next line of code can be read. But it does imply an order of operations. Obviously this code will produce the numbers 1 to 4 in order. 
 
 ```js
 console.log(1);
@@ -78,7 +76,34 @@ main();
 >
 > [Webster's Dictrionary](https://www.merriam-webster.com/dictionary/asynchronous)
 
-Again, the dictionary definition isn't helpful. To use the HTML page example, when the HTML is being parsed and a ``<script src="script.js" async></script>`` (notice async) tag is encountered. The script will <u>not</u> prevent the HTML from being parsed. Instead, the browser will begin downloading the script while simultaneously parsing the HTML. Then, once the download has completed the script will be executed. It's rather confusing that `async` indicates a simultaneous process. Below is an example of using generators to run code asynchronously.
+Again, the dictionary definition isn't helpful. To use the HTML page example, when the HTML is being parsed and a ``<script src="script.js" async></script>`` (notice `async`) tag is encountered. The script will <u>not</u> prevent the HTML from being parsed. Instead, the browser will begin downloading the script while simultaneously parsing the HTML. Then, once the download has completed the script will be executed. So `async` refers to the ability continue performing one task, while waiting for another task to finish. That other task is commonly one that the application doesn't mange, like a database request, or downloading a remote resource, but it doesn't necessarily have to be. So asynchronous code is continuing to do work while waiting for something else to happen. Promises,  async/await, and generators can all be used to write asynchronous JavaScript. 
+
+```js
+const getUser = async name => {
+  const user = await new Promise(resolve => {
+    setTimeout(() => resolve({ user: name }), 1000);
+  });
+  console.log("Resolved :)");
+  return user;
+};
+
+// make mock async request
+const dan = getUser("dan");
+// do work
+for (let i = 0; i < 5; i++) {
+  console.log("Waiting...");
+}
+```
+
+
+
+### Concurrency
+
+> **Concurrent computing** is a form of [computing](https://en.wikipedia.org/wiki/Computing) in which several [computations](https://en.wikipedia.org/wiki/Computation) are executed during overlapping time periods—*concurrently*—instead of *sequentially* (one completing before the next starts).
+>
+> [Concurrent Computing](https://en.wikipedia.org/wiki/Concurrent_computing)
+
+Concurrent computing doesn't require multiple threads. Concurrency means alternating the execution of code blocks. This means do a little of code block 'a', then a little of code block 'b', etc. until the program finishes. Go handles concurrency with *goroutines*. The go runtime schedules the concurrency. In JavaScript concurrency can be created using `async` or generators. But it's more of a manual process.  Below is an example of concurrent JavaScript code written with generators, and concurrent go code. 
 
 ```js
 class Say {
@@ -120,23 +145,7 @@ main();
 
 
 
-### Single Threaded and Multi Threaded  
-
-This is a very simple breakdown. A CPU can have multiple cores; each core can run multiple processes; each process contains 1 or more threads of execution. So a thread is the lowest level execution context. JavaScript is single threaded. So it has only one execution context. When JavaScript is written synchronously, the runtime must finish executing each code block before moving on to the next,  this means long running tasks are blocking execution  of the rest of the code. But when JavaScript is written asynchronously the runtime is able to move back and forth between code blocks so that one code block doesn't have to complete before another can begin. In go, a *goroutine* is an abstraction over threads that allow you to easily write multi threaded code. Go routines allow you to write code that is executed concurrently. So when JavaScript would use `async` to prevent blocking, go would use *goroutines*. Obviously multi-threaded code can do more work in same amount of time than a single threaded code.
-
-
-
-### Concurrency
-
-> **Concurrent computing** is a form of [computing](https://en.wikipedia.org/wiki/Computing) in which several [computations](https://en.wikipedia.org/wiki/Computation) are executed during overlapping time periods—*concurrently*—instead of *sequentially* (one completing before the next starts). 
->
-> [Concurrent Computing](https://en.wikipedia.org/wiki/Concurrent_computing)
-
-Concurrent computing requires multiple threads. *Goroutines* are an abstraction over threads that make it easier to write multi-threaded software.
-
-
-
-The following concurrent code is from a  [A Tour of Go](https://tour.golang.org/concurrency/1) . 
+The following concurrent code is from a  [A Tour of Go](https://tour.golang.org/concurrency/1) .
 
 ```go
 package main
@@ -157,17 +166,6 @@ func main() {
 	go say("world")
 	say("hello")
 }
-
-// world
-// hello
-// hello
-// world
-// world
-// hello
-// hello
-// world
-// world
-// hello
 ```
 
 
@@ -178,11 +176,7 @@ func main() {
 >
 > [Parallel Computing](https://en.wikipedia.org/wiki/Parallel_computing)
 
-Multiple physical processors are required to have true parallelism. Typically, parallelism is used to perform multiple similar calculations, while concurrency is used with multiple unrelated calculations. Parallelism fits under the broader umbrella of concurrency. So concurrency is not parallelism, but parallel code is concurrent as well. 
-
-
-
-Below is a modified version of the concurrency example above.
+Multiple physical processors are required to have true parallelism. Typically, parallelism is used to perform multiple similar calculations, while concurrency is used with multiple unrelated calculations. Parallelism fits under the broader umbrella of concurrency. So concurrency is not parallelism, but parallel code is concurrent as well. Below is a modified version of the concurrency example above. Because JavaScript is single threaded it can't run in parallel. We'll there are new innovations to make that a possibility, but that's beyond the scope of this article. 
 
 ```go
 package main
@@ -210,20 +204,17 @@ func main() {
 	go say("hello", &wg)
 	wg.Wait()
 }
-
-// hello
-// world
-// world
-// hello
-// world
-// hello
-// world
-// hello
-// hello
-// world
 ```
 
 
+
+### Single Threaded and Multi Threaded
+
+This is a very simple breakdown. A CPU can have multiple cores; each core can run multiple processes; each process contains 1 or more threads of execution. So a thread is the lowest level execution context. 
+
+JavaScript is single threaded. So it has only one execution context. When JavaScript is written synchronously, the runtime must finish executing each code block before moving on to the next,  this means long running tasks are blocking execution of the rest of the code. But when JavaScript is written asynchronously the runtime is able to move back and forth between code blocks so that one code block doesn't have to complete before another can begin. This ability can be used to write concurrent code in JavaScript. 
+
+In go, a *goroutine* is an abstraction over threads that allow you to easily write concurrent code, single or multi threaded and when properly configured in parallel. 
 
 
 
