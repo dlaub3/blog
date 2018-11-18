@@ -17,13 +17,80 @@ Algorithms can be broken down into two major categories, searching algorithms an
 
 **Bubble Sort**: A bubble sort will pass through an array swapping larger and smaller values until no values are swapped. This may take multiple passes over the array. 
 
+```js
+function bubbleSort(array) {
+  let l = array.length;
+  for(let i = 0; i < l; i++) {
+    let swapped = false;
+    
+    for(let j = 0; j < l - i - 1; j++) {
+      if (array[j] > array[j + 1]) {
+        [array[j], array[j+1]] = [array[j+1], array[j]] 
+        swapped = true;
+      }
+    }
+    if(swapped == false) {
+      break;
+    } 
+  }
+  
+  return array;
+}
+```
+
+
+
 
 
 **Insertion Sort**:  Insertion sort makes a single pass through the data. All data on the left is considered sorted. 
 
+```js
+function insertionSort(array) {
+  let l = array.length;
+    
+  for(let i = 1; i < l; i++) {
+    let k = array[i];
+    let j = i - 1;
+    
+    while( j >= 0 && k < array[j]) {
+      array[j + 1] = array[j];
+      j--;
+    }
+
+    array[j + 1] = k;
+
+  }
+  return array;
+}
+```
+
+
+
 
 
 **Selection Sort**:  Selection sort, sorts from smallest to largest. It will find the smallest element, move it to the front, and then find the next smallest element etc. 
+
+```js
+function selectionSort(array) {
+  let l = array.length;
+
+  for(let i = 0; i < l; i++) {
+    let min = i;
+
+    for(let j = i + 1; j < l; j++) {
+      if(array[min] > array[j]) {
+        min = j;
+      }
+    }
+
+    [array[i], array[min]] = [array[min], array[i]]
+  }
+
+  return array;
+}
+```
+
+
 
  
 
