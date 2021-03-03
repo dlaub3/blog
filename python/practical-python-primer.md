@@ -1,8 +1,11 @@
 ---
 title: "Practical Python Primer"
 date: 2018-07-28
-Categories: ["python"]
 description: "Basic Python language mechanics"
+draft: false
+tags: ['python', "language-basics"]
+categories: ["python", "language-basics"]
+
 ---
 
 

@@ -3,6 +3,9 @@ title: "Bits, Bytes, and Unicode"
 date: 2018-07-29T19:13:07-04:00
 draft: false
 description: "What is ASCII, UTF-8, and Unicode"
+tags: ['unicode', 'utf-8']
+categories: ['encoding']
+
 ---
 
 

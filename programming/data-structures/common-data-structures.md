@@ -3,6 +3,9 @@ title: "Common Data Structures"
 date: 2018-08-11T14:41:27-04:00
 draft: false
 description: "An overview of common data structures"
+tags: ['data-structures', 'ecmascript']
+categories: ['engineering']
+
 ---
 
 

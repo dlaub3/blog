@@ -3,8 +3,10 @@ title: "HTTP"
 date: 2018-08-28
 draft: false
 description: What is HTTP?
----
+tags: ['http', 'http/2']
+categories: ['web']
 
+---
 
 
 The web is built on the [HTTP](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol) protocol, but what is it and how does it work?

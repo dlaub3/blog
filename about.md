@@ -2,6 +2,8 @@
 title: "About"
 date: 2018-07-04
 description: "About the site and it's author"
+draft: false
+
 ---
 
 
@@ -24,5 +26,4 @@ I use a Linode sever as my 'devops box'. I have Jenkins installed via Docker wit
 
 **About me:**
 
-I'm a full stack web developer with a passion to learn. I enjoy JavaScript, Go, and Python, though I have the most professional experience with PHP and Perl. I'm a Linux and Docker lover. 
-
+I'm a software engineer and I love programming the web. My background includes working with the LAMP stack on the backend and React/TypeScript on the frontend. I'm an AWS Certified Solutions Architect.

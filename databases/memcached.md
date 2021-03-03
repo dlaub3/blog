@@ -1,8 +1,11 @@
 ---
-title: "Memcashed"
+title: Memcashed
 date: 2018-07-29
-tags: ["memcached", "jot"]	
-description: "Absolute basics of memcached"
+description: Absolute basics of memcached
+draft: false
+tags: ["database", "nosql", "memcached"]	
+categories: ["database"]
+
 ---
 
 https://memcached.org

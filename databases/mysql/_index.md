@@ -1,4 +1,5 @@
 ---
 title: "Mysql"
+draft: false
 ---
 

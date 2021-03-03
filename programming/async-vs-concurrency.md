@@ -3,6 +3,9 @@ title: "Async vs Concurrency"
 date: 2018-08-28T06:53:20-04:00
 draft: false
 description: Comparing JavaScript async with Go's goroutines
+tags: ['golang', 'ecmascript', 'async', 'concurrency']
+categories: ['async', 'concurrency']
+
 ---
 
 

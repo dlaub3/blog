@@ -3,6 +3,9 @@ title: "Database Families"
 date: 2018-08-12
 draft: false
 description: "A brief overview of different families of databases"
+tags: ['sql', 'database', 'nosql']
+categories: ['database']
+
 ---
 
 

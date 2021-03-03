@@ -1,8 +1,11 @@
 ---
-title: "Bash"
+title: "CLI Utils"
 date: 2018-07-29
-tags: ["bash", "jot"]
-description: "Useful bash commands"		
+tags: ["bash", 'linux', 'cli']
+categories: ['bash', 'linux']
+draft: false
+description: "Useful CLI Utilities"		
+
 ---
 
 
