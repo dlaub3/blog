@@ -3,7 +3,7 @@ title: "Practical Golang Primer"
 date: 2018-08-18
 draft: false
 description: Some basic golang examples
-tags: ['golang', 'language-basics']
+tags: ['golang', 'language basics']
 categories: ['golang']
 
 ---

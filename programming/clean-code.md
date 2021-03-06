@@ -3,7 +3,7 @@ title: "10 Principles for Clean Code"
 date: 2018-08-11
 draft: false
 description: "10 Principles for learning the art of writing clean code."
-tags: ['clean-code', 'coding']
+tags: ['clean code', 'coding']
 categories: ['coding']
 
 ---
