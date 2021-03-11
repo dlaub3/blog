@@ -26,4 +26,4 @@ I use a Linode sever as my 'devops box'. I have Jenkins installed via Docker wit
 
 **About me:**
 
-I'm a software engineer and I love programming the web. My background includes working with the LAMP stack on the backend and React/TypeScript on the frontend. I'm an AWS Certified Solutions Architect.
+I'm a software engineer and I love programming the web. My background includes working with the LAMP stack on the backend and React/TypeScript on the frontend. I'm an AWS Certified Associate Solutions Architect.
