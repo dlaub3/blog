@@ -11,7 +11,7 @@ toc: true
 
 OWASP (Open Web Application Security Project) reports on the most critical security vulnerabilities found on websites. Knowing what's on the list can help you be aware of potential risks in your own systems and aid in establishing strategies to protect from those attacks. 
 
-### Injection 
+## Injection 
 
 SQL injection attacks occur when an attack tries to get your application to execute malicious code designed to perform CRUD operations on your database. Areas of your site that accept user input and store it in the database are targets for SQL injection. That's why you should always use prepared statements for your SQL. 
 
