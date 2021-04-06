@@ -6,21 +6,17 @@ draft: false
 
 ---
 
-
-
 **About the site:**
 
 This site is powered by Hugo and  Amazon Web Services.  It performs well and I'm proud of it.
 
 - https://developers.google.com/speed/pagespeed/insights/?url=https%3A%2F%2Fblockscope.dev
 
-- https://www.webpagetest.org/result/210312_AiY1_e7c7aa955f2d852d79eab696efb6c413/
+- https://www.webpagetest.org/result/210313_Ai66_29ad139e6e2435d39a5e20e8c2fa1025/
 
 - https://observatory.mozilla.org/analyze/blockscope.dev
 
 I use a Linode sever as my 'devops box'. I have Jenkins installed via Docker with automatic SSL via Let's Encrypt and Traefik. CI is a nice thing to have ;). 
-
-
 
 **About me:**
 

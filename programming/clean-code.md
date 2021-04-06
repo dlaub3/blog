@@ -5,28 +5,21 @@ draft: false
 description: "10 Principles for learning the art of writing clean code."
 tags: ['clean code', 'coding']
 categories: ['coding']
+toc: true
 
 ---
 
-
-
 The ultimate goal is code that is easy to read, understand, and maintain. It's code that doesn't require tons of comments because it's so expressive on it's own. 
 
-
-
-#####   1. **Stay DRY**
+##   1. **Stay DRY**
 
 **DRY**: Don't Repeat Yourself
 
-
-
-#####   2. **Be TED**
+##   2. **Be TED**
 
 **TED**: Terse, Expressive, Do One Thing
 
-
-
-##### 3.  **Name things carefully**
+## 3.  **Name things carefully**
 
 * Watch out for 'And', 'If', and 'Or' in your names, they indicate you're doing multiple things that could be separated.
 
@@ -40,26 +33,20 @@ The ultimate goal is code that is easy to read, understand, and maintain. It's c
 
 * Good naming should convey intent, that way you don't need a comment to explain what the variable is used for. 
 
-  
-
-##### 4. Use mayfly variables
+## 4. Use mayfly variables
 
 Mayfly variables are short lived variables that only use memory when they are needed.
 
+## 5. Use intermediate variables. 
 
-
-##### 5. Use intermediate variables. 
-
-   ```js
+```js
 var nice = goodAttitute && niceToOthers && stillBelievesInSanta;
 if(nice) {
     return getsPresents;
 }
-   ```
+```
 
-
-
-##### 6. **Keep things short**
+## 6. **Keep things short**
 There are recommended maximum lengths for all of these.
 
 * Variable Names
@@ -68,30 +55,24 @@ There are recommended maximum lengths for all of these.
 * Classes 
 * Files 
 
-
-
-##### 7. Don't use magic numbers
+## 7. Don't use magic numbers
 
 Magic number are numbers that don't mean anything on their own. They make the code harder to maintain.
 
 **Bad**
 
-   ```js
+```js
 if (employtee.type == '2'){}
-   ```
+```
 
 **Good**
 
-   ```js
+```js
 var manager = 2;
 if (employee.type == manager) {}
-   ```
+```
 
-   
-
-
-
-##### 8. Return Early
+## 8. Return Early
 
 **Bad**
 
@@ -108,8 +89,6 @@ function myFunction(superbig) {
 }
 ```
 
-
-
 **Good**
 
 ```js
@@ -125,11 +104,7 @@ function myFunction(superbig) {
 }
 ```
 
-
-
-
-
-##### 9. Reduce Nested If Else Statements
+## 9. Reduce Nested If Else Statements
 
 Ideally, you would never nest if/else statements.
 
@@ -151,8 +126,6 @@ if(x > 20) {
 }
 ```
 
-
-
 **Good**
 
 ```js
@@ -170,9 +143,7 @@ if(x > 20) {
 }
 ```
 
-
-
-##### 10. **Use Enums**
+## 10. **Use Enums**
 
 Enums provide a mechanism for giving meaning to arbitrary data. Enums may not be part of the language you work with, but you can at least emulate their behavior. 
 
@@ -189,43 +160,12 @@ if(user.accountLevel > accountLevels.standard) {
 }
 ```
 
+## References and Further Learning: 
 
-
-
-
-
-
-##### References and Further Learning: 
-
-Clean Code Cheat Sheet
-
-https://www.bbv.ch/images/bbv/pdf/downloads/V2_Clean_Code_V3.pdf
-
-Uncle Bob's Clean Code
-
-https://www.safaribooksonline.com/live-training/courses/clean-code/0636920194538
-
-Cory House -- This post was based largely on Cory's course Writing Clean Code for Humans
-
-https://www.pluralsight.com/courses/writing-clean-code-humans
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+- Clean Code Cheat Sheet
+- https://www.bbv.ch/images/bbv/pdf/downloads/V2_Clean_Code_V3.pdf
+- Uncle Bob's Clean Code
+- https://www.safaribooksonline.com/live-training/courses/clean-code/0636920194538
+- Cory House -- This post was based largely on Cory's course Writing Clean Code for Humans
+- https://www.pluralsight.com/courses/writing-clean-code-humans
 

@@ -5,16 +5,13 @@ description: "Basic Python language mechanics"
 draft: false
 tags: ['python', "language basics"]
 categories: ["python", "language basics"]
+toc: true
 
 ---
 
-
-
 Python was developed by Dutch mathematician Guido van Rossum who  is still the principle author and considered the BDFL (Benevolent Dictator for Life).
 
-
-### [The Zen of Python](https://www.python.org/dev/peps/pep-0020/#id3)  
-
+## [The Zen of Python](https://www.python.org/dev/peps/pep-0020/#id3)  
 
 * Beautiful is better than ugly.
 * Explicit is better than implicit.
@@ -36,20 +33,11 @@ Python was developed by Dutch mathematician Guido van Rossum who  is still the p
 * If the implementation is easy to explain, it may be a good idea.
 * Namespaces are one honking great idea -- let's do more of those!
 
-
-
-
-
-### Documentation 
+## Documentation 
 
 * Python.org/doc
 
-
-
-
-
-
-### Language Features 
+## Language Features 
 
 * Everything is an object in Python 3
 * In Python 3 all types are classes. 
@@ -61,23 +49,13 @@ Python was developed by Dutch mathematician Guido van Rossum who  is still the p
 * Integers and strings are immutable in Python
 * The 'None' type has a type of 'None' and a value of 'None'. 
 
-
-
-
-
-
-### False 
+## False 
 
 * Empty Strings
 * Number 0
 * Type None
 
-
-
-
-
-
-### Strings
+## Strings
 
 ```python
 str = '''
@@ -108,11 +86,9 @@ print(id(x))
 print(id(y))
 ```
 
+## Structured Data
 
-
-### Structured Data
-
-**Lists** 
+### Lists 
 
 Lists are mutable and zero based.
 
@@ -131,9 +107,7 @@ print(', '.join(map(str, list)))
 print(len(list))
 ```
 
-
-
-**Tupals**
+### Tupals
 
 A tupal is not mutable.
 
@@ -148,9 +122,7 @@ else:
     print("not tupal")
 ```
 
-
-
-**Dictionary**
+### Dictionary
 
 A dictionary is analogous to a hash.
 
@@ -168,9 +140,7 @@ print(dictionary.get('five'))
 print('one' in dictionary)
 ```
 
-
-
-**Sets**
+### Sets
 
 A set is like a list but doesn't allow duplicate elements. 
 
@@ -178,8 +148,6 @@ A set is like a list but doesn't allow duplicate elements.
 set = set("this is a set")
 print(sorted(set))
 ```
-
-
 
 A list comprehension is a list created from another list or iterator. 
 
@@ -195,15 +163,11 @@ def main():
     if isinstance(seq, set): print("set")
 ```
 
-
-
-**Mixed Structures.** 
+### Mixed Structures
 
 It's possible to store anything is a data sructrue because everything is an object and variables store references to objects. 
 
-
-
-### Conditionals 
+## Conditionals 
 
 * https://docs.python.org/3/tutorial/controlflow.html?highlight=else
 
@@ -227,9 +191,7 @@ x = 1 if y else 2 # Ternary if in python
 print(x)
 ```
 
-
-
-### Loops 
+## Loops 
 
 https://docs.python.org/3/tutorial/controlflow.html?highlight=else
 
@@ -266,9 +228,7 @@ for k,v in x.items():
     print('k: {}. v: {}'.format(k, v))  
 ```
 
-
-
-### Arithmetic Operators 
+## Arithmetic Operators 
 
 ```python
 + 
@@ -285,9 +245,7 @@ z = -z
 z = +z
 ```
 
-
-
-### Bitwise Operator
+## Bitwise Operator
 
 They operate on individual bits not the text representation.
 
@@ -306,9 +264,7 @@ print(a ^ b)
 print(a & b)
 ```
 
-
-
-### Comparison Operators
+## Comparison Operators
 
 ```python
 < 
@@ -327,9 +283,7 @@ True
 True
 ```
 
-
-
-### Boolean Operators
+## Boolean Operators
 
 ```python
 and
@@ -341,9 +295,7 @@ is # same object identity
 is not # not same obect identity
 ```
 
-
-
-### Operator Precedence 
+## Operator Precedence 
 
 This is similar to math. 
 
@@ -369,9 +321,7 @@ https://docs.python.org/3/reference/expressions.html
 | `x[index]`, `x[index:index]`, `x(arguments...)`, `x.attribute` | Subscription, slicing, call, attribute reference             |
 | `(expressions...)`, `[expressions...]`, `{key: value...}`,`{expressions...}` | Binding or tuple display, list display, dictionary display, set display |
 
-
-
-### Functions 
+## Functions 
 
 Functions are like functions and sub routines in other languages.  By default all functions return a value. If there is no return the keyword 'None' is returned. 
 
@@ -400,9 +350,7 @@ def say(x = "Hello", y = "World"):
 say() 
 ```
 
-
-
-### Argument Lists 
+## Argument Lists 
 
 *args and **kwargs 
 
@@ -428,9 +376,7 @@ def say(*args):
     else: print("Empty")
 ```
 
-
-
-### Generators 
+## Generators 
 
 A special function that us used to create a series of values.
 
@@ -459,9 +405,7 @@ def generator(*args):
 # yield is like return, only it works inside a generator and allows the function to return multiple values.
 ```
 
-
-
-### Decorators 
+## Decorators 
 
 A decorator is a form of meta programming. It is a special type of function that returns a wrapper function. 
 
@@ -504,11 +448,7 @@ def maybedecorator()
 maybedecorator()
 ```
 
-
-
-
-
-### Classes
+## Classes
 
 https://docs.python.org/3/tutorial/classes.html
 
@@ -533,8 +473,6 @@ def main():
 if __name__ == '__main__': main()
     
 ```
-
-
 
 **Constructing an object.** 
 
@@ -561,8 +499,6 @@ def main():
    print(bmw.speed)
 ```
 
-
-
 **Exceptions**
 
 https://docs.python.org/3/tutorial/errors.html
@@ -578,9 +514,7 @@ def main()
 if __name__ == '__main__':main()
 ```
 
-
-
-### String Objects
+## String Objects
 
 https://docs.python.org/3/library/stdtypes.html#string-methods
 
@@ -628,11 +562,7 @@ print(s.split())
 print(s.split('i'))
 ```
 
-
-
-
-
-### Python File I/O
+## Python File I/O
 
 https://docs.python.org/3/tutorial/inputoutput.html#reading-and-writing-files
 
@@ -644,7 +574,6 @@ f = open('file.txt', 'r')
 for line in f:
     print(line.rstrip())
     
-
 read = open('file.txt', 'rt')
 write = open('file-copy.txt', 'wt')
 for line in read:
@@ -653,7 +582,6 @@ for line in read:
     print('.', end='', flush=True)
 outfile.close()
 print('\nfinished')
-
 
 readBin = open('img.jpg', 'rb')
 writeBin = open('img-copy.jpg', 'wb')
@@ -668,9 +596,7 @@ while True:
      print('\nfinished')   
 ```
 
-
-
-### Built In Functions
+## Built In Functions
 
 * https://docs.python.org/3/library/functions.html
 
@@ -688,7 +614,6 @@ repr(str)
 ascii(str)
 chr(128406)
 ord('😋')
-
 
 # container functions
 tupal = (1, 2, 3, 4, 5)
@@ -710,43 +635,31 @@ for a,b in tupal3: print(f'{a} - {b}')
 for i, x in enumerate(tupal3): # gives index and value
     print(i, x)
 
-
 # object and class functions
 type(x)
 id(x)
 isintance(x, int)
 ```
 
-
-
-### Modules 
+## Modules 
 
 * https://docs.python.org/3/library
 * https://docs.python.org/3/library/platform.html
 
-
-
 `__name__`  returns the name of the current module. If the file was running from an import  then `__main__` would be the name of the  module, otherwise `__main__` has a special value that means it is the main file.
 
-
-
 `if __name__ == '__main__': main()`  ...when the script is imported and run as a module the code in main does not execute.  But when run directly the code in main does execute. This allows you to import the file and use the functions, but the code in main won't execute. So if you only define functions in the script body and only call them in main you can reuse the module. 
-
-
 
 ```python
 def main(): 
     hello()
 
-    
 def hello():
     print('Hello')
     
 if __name__ == '__main__': main()
 
 ```
-
-
 
 ```python
 import sys
@@ -766,15 +679,11 @@ def main():
     print(list(range(25)))
     time = datetime.datetime.now()
 	print( time.year, time.month, time.day, time.hour, time.minute, time.second, time.microsecond )
-            
               
-       
 if __name__ == '__main__': main()
 ```
 
-
-
-### Database Operations
+## Database Operations
 
 ```python
 import sqlite3
@@ -782,9 +691,7 @@ import sqlite3
 db = sqlite3.connect('db-api.db')
 ```
 
-
-
-### Exercises 
+## Exercises 
 
 **Make a module** 
 
@@ -792,17 +699,8 @@ Write a module to give the time in words.
 
 Design data before you write your code. 
 
+## References
 
-
-
-
-**Resources**
-
-Bill Weinman [http://python.bw.org/](http://python.bw.org/)
-
-https://www.lynda.com/Python-tutorials/Python-Essential-Training/614299-2.html
-
-
-
-
+- Bill Weinman [http://python.bw.org/](http://python.bw.org/)
+- https://www.lynda.com/Python-tutorials/Python-Essential-Training/614299-2.html
 

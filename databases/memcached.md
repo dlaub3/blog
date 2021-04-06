@@ -5,13 +5,11 @@ description: Absolute basics of memcached
 draft: false
 tags: ["database", "nosql", "memcached"]	
 categories: ["database"]
+toc: false
 
 ---
 
 https://memcached.org
-
-
-**Memcached** 
 
 ```bash
 ps -aux | grep -i memcached

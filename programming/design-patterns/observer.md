@@ -5,14 +5,11 @@ draft: false
 description: Implementing the observer design pattern.
 categories: ["engineering"]
 tags: ["ecmascript"]
+toc: false
 
 ---
 
-
-
 The observer pattern notifies a list of subscribers when changes are made to the observed data.
-
-
 
 ```js
 class Observer {
@@ -64,14 +61,8 @@ obs.remove(obs1);
 birdsproxy.four = "Robin";
 ```
 
+## References 
 
-
-
-
-##### References 
-
-https://www.dofactory.com/javascript/observer-design-pattern
-
-https://hackernoon.com/observer-vs-pub-sub-pattern-50d3b27f838c
-
-https://otaqui.com/blog/1374/event-emitter-pub-sub-or-deferred-promises-which-should-you-choose/index.html
+- https://www.dofactory.com/javascript/observer-design-pattern
+- https://hackernoon.com/observer-vs-pub-sub-pattern-50d3b27f838c
+- https://otaqui.com/blog/1374/event-emitter-pub-sub-or-deferred-promises-which-should-you-choose/index.html

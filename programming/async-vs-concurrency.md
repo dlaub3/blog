@@ -5,14 +5,11 @@ draft: false
 description: Comparing JavaScript async with Go's goroutines
 tags: ['golang', 'ecmascript', 'async', 'concurrency']
 categories: ['async', 'concurrency']
+toc: true
 
 ---
 
-
-
 I spent some time recently considering how JavaScript's asynchronous execution compares with Go's *goroutines*. I found I needed a clear understanding of six concepts to understand the difference. These all relate to code execution in time. 
-
-
 
 * Sequential 
 * Synchronous 
@@ -22,9 +19,7 @@ I spent some time recently considering how JavaScript's asynchronous execution c
 * Single Threaded 
 * Multi Threaded
 
-
-
-### Sequential 
+## Sequential 
 
 > following in sequence
 >
@@ -39,9 +34,7 @@ console.log(3);
 console.log(4);
 ```
 
-
-
-### Synchronous
+## Synchronous
 
 > happening, existing, or arising at precisely the same time
 >
@@ -71,9 +64,7 @@ const main = () => {
 main();
 ```
 
-
-
-### Asynchronous
+## Asynchronous
 
 > not simultaneous or concurrent in time **:** not [synchronous](https://www.merriam-webster.com/dictionary/synchronous)
 >
@@ -98,13 +89,11 @@ for (let i = 0; i < 5; i++) {
 }
 ```
 
-
-
-### Concurrency
+## Concurrency
 
 > **Concurrent computing** is a form of [computing](https://en.wikipedia.org/wiki/Computing) in which several [computations](https://en.wikipedia.org/wiki/Computation) are executed during overlapping time periods—*concurrently*—instead of *sequentially* (one completing before the next starts).
 >
-> [Concurrent Computing](https://en.wikipedia.org/wiki/Concurrent_computing)
+> [Wikipedia](https://en.wikipedia.org/wiki/Concurrent_computing)
 
 Concurrent computing doesn't require multiple threads. Concurrency means alternating the execution of code blocks. This means do a little of code block 'a', then a little of code block 'b', etc. until the program finishes. Go handles concurrency with *goroutines*. The go runtime schedules the concurrency. In JavaScript concurrency can be created using `async` or generators. But it's more of a manual process.  Below is an example of concurrent JavaScript code written with generators, and concurrent go code. 
 
@@ -146,8 +135,6 @@ const main = () => {
 main();
 ```
 
-
-
 The following concurrent code is from a  [A Tour of Go](https://tour.golang.org/concurrency/1) .
 
 ```go
@@ -171,13 +158,11 @@ func main() {
 }
 ```
 
-
-
-### Parallelism 
+## Parallelism 
 
 > **Parallel computing** is a type of [computation](https://en.wikipedia.org/wiki/Computing) in which many calculations or the execution of [processes](https://en.wikipedia.org/wiki/Process_(computing)) are carried out simultaneously.[[1\]](https://en.wikipedia.org/wiki/Parallel_computing#cite_note-1)
 >
-> [Parallel Computing](https://en.wikipedia.org/wiki/Parallel_computing)
+> [Wikipedia](https://en.wikipedia.org/wiki/Parallel_computing)
 
 Multiple physical processors are required to have true parallelism. Typically, parallelism is used to perform multiple similar calculations, while concurrency is used with multiple unrelated calculations. Parallelism fits under the broader umbrella of concurrency. So concurrency is not parallelism, but parallel code is concurrent as well. Below is a modified version of the concurrency example above. Because JavaScript is single threaded it can't run in parallel. We'll there are new innovations to make that a possibility, but that's beyond the scope of this article. 
 
@@ -209,9 +194,7 @@ func main() {
 }
 ```
 
-
-
-### Single Threaded and Multi Threaded
+## Single Threaded and Multi Threaded
 
 This is a very simple breakdown. A CPU can have multiple cores; each core can run multiple processes; each process contains 1 or more threads of execution. So a thread is the lowest level execution context. 
 
@@ -219,14 +202,9 @@ JavaScript is single threaded. So it has only one execution context. When JavaSc
 
 In go, a *goroutine* is an abstraction over threads that allow you to easily write concurrent code, single or multi threaded and when properly configured in parallel. 
 
+## References 
 
-
-##### References 
-
-https://blog.golang.org/concurrency-is-not-parallelism
-
-https://computing.llnl.gov/tutorials/parallel_comp/#Whatis
-
-https://developer.mozilla.org/en-US/docs/Web/JavaScript/EventLoop
-
-https://www.ardanlabs.com/blog/2014/01/concurrency-goroutines-and-gomaxprocs.html
+- https://blog.golang.org/concurrency-is-not-parallelism
+- https://computing.llnl.gov/tutorials/parallel_comp/#Whatis
+- https://developer.mozilla.org/en-US/docs/Web/JavaScript/EventLoop
+- https://www.ardanlabs.com/blog/2014/01/concurrency-goroutines-and-gomaxprocs.html

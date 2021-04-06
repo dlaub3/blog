@@ -5,20 +5,17 @@ draft: false
 description: Some basic golang examples
 tags: ['golang', 'language basics']
 categories: ['golang']
+toc: true
 
 ---
 
-
-
-### Documentation
+## Documentation
 
 https://golang.org/doc/
 
 https://golang.org/pkg/builtin
 
-   
-
-### Language Features
+## Language Features
 
 - go is a compiled language. It is based on C langauge families. 
 - go tool can run without precompiling 
@@ -33,10 +30,7 @@ https://golang.org/pkg/builtin
 - designed based on C, C++, C#, Pascal/Modula/Oberon
 - is well suited to function programming
 
-
-
-
-### Syntax
+## Syntax
 
 * case sensitive
 * variables are lower and mixed case.
@@ -44,10 +38,7 @@ https://golang.org/pkg/builtin
 * semicolons are not needed (usually) - the lexer will add them. 
 * code blocks are wrapped with braces. 
 
-  
-
-
-### Go commands
+## Go commands
 
 ```go
 go 
@@ -62,28 +53,15 @@ go help test //documentation for tesing
 gofmt format gocode // auto format code
 ```
 
-
-
-
-
-### Golang structure 
-
-
-
-#### Project structure
+## Project structure
 
 * package names are all lower case and a single word
-
-  
 
 >A typical workspace contains many source repositories containing many
 >packages and commands. Most Go programmers keep *all* their Go source code
 >and dependencies in a single workspace.  
 >
 ><cite>[golang.org/doc/code.html](golang.org/doc/code.html)</cite>
-
-
-
 
 ```bash
 # src contains Go source files
@@ -104,11 +82,7 @@ cd mypackage
 touch mypackage.go 
 ```
 
-
-
-
-
-#### Import Declarations
+## Import Declarations
 
 ```go
 package main   
@@ -121,19 +95,13 @@ import (
 ) 
 ```
 
+## File Structure
 
+- package declaration
+- import
+- main function
+- other functions
 
-#### File Structure
-
-* package declaration
-
-* import
-
-* main function
-
-* other functions
-
-  
 ```go
 
 // 	first statement must be package name
@@ -158,9 +126,7 @@ func main() {
 }          
 ```
 
-
-
-### Variable types 
+## Variable types 
 
 https://golang.org/pkg/go/types/#BasicKind
 
@@ -193,9 +159,7 @@ https://tour.golang.org/basics/13
 
 https://tour.golang.org/basics/14
 
-
-
-### If/Else
+## If/Else
 
 ```go
 if x < 0 {
@@ -203,7 +167,6 @@ if x < 0 {
 } else { // else has to be on this line
 
 }
-
 
 // these variables are local to the if statement
 if x:= 42; x < 0 {
@@ -213,9 +176,7 @@ if x:= 42; x < 0 {
 }
 ```
 
-
-
-### Switch Statements
+## Switch Statements
 
 https://tour.golang.org/flowcontrol/10
 
@@ -231,9 +192,7 @@ case "Chocolate Chip":
 }
 ```
 
-
-
-### Loops
+## Loops
 
 ```go
 sum := 0
@@ -249,9 +208,7 @@ for _, a := range aa {
 
 ```
 
-
-
-### Strings
+## Strings
 
 https://blog.golang.org/strings
 
@@ -272,9 +229,7 @@ string.EqualFold("str", "STR") // returns true/false
 strings.Contains("string", "search")
 ```
 
-
-
-### Numbers
+## Numbers
 
 Floating point numbers are represented in binary in go. 
 
@@ -301,9 +256,7 @@ b3.SetFloat64(21.23)
 bSum.Add(&b1, &b2).Add(&bSum, &b3) // & is a pointer or reference
 ```
 
-
-
-### Arrays 
+## Arrays 
 
 [n]T
 
@@ -318,9 +271,7 @@ s[0] = "String1"
 s[1] = "String2"
 ```
 
-
-
-### Slices 
+## Slices 
 
 In Go an array is fixed in length and must be manually "resized" to add additional elements. Other languages like JS and Python handle this automatically for you in the background. Go provides slices as an abstraction over arrays to accommodate this behavior. Slices may contain any type. 
 
@@ -337,8 +288,6 @@ a[low : high]
 > Range: When ranging over a slice, two values are returned for each iteration. The first is the index, and the second is a copy of the element at that index .
 >
 > <cite>https://tour.golang.org/moretypes/16</cite>
-
-
 
 ```go
 package main
@@ -357,9 +306,7 @@ func main() {
 }
 ```
 
-
-
-### Maps
+## Maps
 
 https://blog.golang.org/go-maps-in-action
 
@@ -388,11 +335,7 @@ func main() {
 }
 ```
 
-
-
-### Managing Complex Types and Collections
-
-#### Structs
+## Structs
 
 Structs provide a way to organize data and create custom types. 
 
@@ -420,9 +363,7 @@ func main() {
 }
 ```
 
-
-
-#### Interfaces
+## Interfaces
 
 A simple value is an instance of a type ( int, string,  byte, etc). Every type in go uses the empty interface. Every type in go is an implementation of at least one interface.  There is no type inheritance only type inference or implied inheritance. 
 
@@ -454,9 +395,7 @@ func main() {
 }
 ```
 
-
-
-### Handling Errors 
+## Handling Errors 
 
 There is no try/catch. An error is an instance of an interface with an error method that returns a string. 
 
@@ -483,9 +422,7 @@ func main() {
 }
 ```
 
-
-
-### Defer  
+## Defer  
 
 `defer` is similar to finally in other languages. `defer` will defer the function call until everything else is finished. If there are multiple they are handled in LIFO order. 
 
@@ -500,9 +437,7 @@ func main() {
 }
 ```
 
-
-
-### Functions
+## Functions
 
 Functions are defined with the `func` keyword, they can receive and return multiple values. 
 
@@ -524,9 +459,7 @@ func divide(a, b int) (int, int) {
 }
 ```
 
-
-
-### Go routines
+## Go routines
 
 Placing `go` before a function creates a go routine. A go routine is a lightweight thread manged by go's runtime.  They are useful for writing concurrent, multi-threaded software applications. When the applications main function finishes the program will exit even if the go routines aren't finished running. 
 
@@ -551,9 +484,7 @@ func sum(a, b int) {
 }
 ```
 
-
-
-### Channels
+## Channels
 
 https://tour.golang.org/concurrency/2
 
@@ -592,11 +523,7 @@ func echo(ch chan<- int, num int) {
 >
 > <cite>https://tour.golang.org/concurrency/4</cite>
 
-
-
-
-
-#### Select 
+## Select 
 
 > The `select` statement lets a goroutine wait on multiple communication operations.
 >
@@ -653,17 +580,13 @@ func main() {
 }
 ```
 
-
-
-### Data Races 
+## Data Races 
 
 https://tour.golang.org/concurrency/9
 
 A data race is caused when multiple operations are performed simultaneously on the same data. For example, a variable may be read and mutated at the same time. Since go routines provide a mechanism for concurrent code execution, care must be taken to avoid data races. A mutex or a semaphore can be used to   prevent data races. 
 
-
-
-### Packages 
+## Packages 
 
 Packages provide a way to package and share code.  Lowercase variables and functions are scoped to the package while uppercase variables and functions are exported. 
 
@@ -696,9 +619,7 @@ main() {
 }
 ```
 
-
-
-### Testing
+## Testing
 
 Golang provides an excellent set of testing and benchmarking tools. The naming convention for tests is `package_test.go` .
 
@@ -708,9 +629,7 @@ I found Mike Sickles course on the topic to be quite good.
 
 https://www.pluralsight.com/courses/go-testing-applications
 
-
-
-### Working with files and the Web. 
+## Working with files and the Web. 
 
 There are several go web frameworks such a Gorilla, Gin, and Buffalo. But go provides excellent built in support for building web applications, so you may not even need a framework. Here is a code sample demonstrating a simple server and router. 
 
@@ -732,34 +651,17 @@ func main() {
 }
 ```
 
-
-
 If you want to learn web development with go, watch  Todd McLeod's course: https://www.udemy.com/go-programming-language
 
-
-
-
-
-##### References
+## References
 
 - https://www.lynda.com/Go-tutorials/Up-Running-Go/412378-2.html
-
 - https://www.udemy.com/go-programming-language/
-
 - https://www.safaribooksonline.com/library/view/ultimate-go-programming/9780134757476/
-
 - https://play.golang.org/
-
 - https://tour.golang.org/
-
 - https://golang.org/doc/#articles
-
 - https://golang.org/doc/effective_go.html
-
 - https://research.swtch.com/gotour
-
 - https://www.youtube.com/watch?v=XCsL89YtqCs
-
 - https://github.com/karlseguin/the-little-go-book
-
-  

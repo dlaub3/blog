@@ -5,67 +5,52 @@ tags: ["bash", 'linux', 'cli']
 categories: ['bash', 'linux']
 draft: false
 description: "Useful CLI Utilities"		
+toc: true
 
 ---
 
-
-
-Rename files to lowercase: 
+## Rename files to lowercase: 
 
 * ` rename -f 'y/A-Z/a-z/' * `
 
-
-
-Find file size:
+## Find file size:
 
 * `ls -lhS`
 * `du -sh *`
 * `df -h .`
 * `du -h --max-depth=1 | sort -hr`
 
-
-
-Monitoring:
+## Monitoring:
 
 * `iostate` 
 * `iotop -u www-data`
 * `top -u www-data`
 * `htop -u www-data`
 
-
-
-Manage Processes 
+## Manage Processes 
 
 * `fg jobid`
 * `bg jobid`
 * `jobs`
 * `pkill -9 php`
 
-
-
-Make a big file: 
+## Make a big file: 
 
 * `fallocate -l 100M bigfile`
 
-
-
-Manage directories 
+## Manage directories 
 
 * `pushd /home/Downloads`
 * `dirs -v`
 * `cd ~0`
 
-
-
-Rsync: 
+## Rsync: 
 
 ```
 rsync -aP --exclude="*" --include="201[1-8]/" --include="201[1-8]/*" --include="201[1-8]/*/*" --omit-dir-times  /source /dest
 ```
 
-
-
-NSLoookup: 
+## NSLoookup: 
 
 ```
 nsloopup

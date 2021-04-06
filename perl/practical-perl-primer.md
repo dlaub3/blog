@@ -5,12 +5,11 @@ tags: ["perl", "language basics"]
 categories: ['perl']
 description: "Basic Perl language mechanics"
 draft: false
-
+toc: true
 
 ---
 
-
-Documentation
+## Documentation
 
 ```perl
 # https://perldoc.perl.org/index-language.html
@@ -18,19 +17,13 @@ perldoc -f chomp # perldoc on chomp
 perldoc perlfaq
 ```
 
-​    
-
-Misc
+## Misc
 
 - The semicolon is technically a separator, but it is good practice to use it as a terminator at the end of each line of code. 
 
 - Whitespace is mostly ignored.
 
-  ​
-
-
-
-Variables and Values 
+## Variables and Values 
 
 ```perl
 # represent a scalar value with $, Perl uses duck typeing for scalar value
@@ -54,9 +47,7 @@ $var = 0 + $var; # force num
 $var = '' . $var; # force string
 ```
 
-
-
-Statements and Expressions 
+## Statements and Expressions 
 
 ```perl
 # expressions represent values
@@ -68,9 +59,7 @@ sub main {
 }
 ```
 
-
-
-Assignment Examples 
+## Assignment Examples 
 
 ```perl
 my ( $x, $y, $z ) = ( 1, 2, 3 ); # assign multiple scalare variables from a list
@@ -80,9 +69,7 @@ my @array = ( 1, 2, 3); # create an array from a list
 my $count = @array; # assign the length of the array
 ```
 
-
-
-Block and Scope
+## Block and Scope
 
 ```perl
 #!/usr/bin/perl
@@ -111,9 +98,7 @@ if ($num > 3) {
 say $num2;
 ```
 
-
-
-Logical Values 
+## Logical Values 
 
 ```perl
 # false values: '', 0, []  in general things that are empty or evalute to 0
@@ -122,9 +107,7 @@ Logical Values
 https://perlmaven.com/boolean-values-in-perl
 ```
 
-
-
-Strings
+## Strings
 
 ```perl
 my $s = "I am a string";
@@ -140,9 +123,7 @@ say "My name is String. ${s}.";
 say qq(My name is String. $s .);
 ```
 
-
-
-Arrays
+## Arrays
 
 ```perl
 my @array = (one, two, three);
@@ -164,9 +145,7 @@ say foreach @{$ref}; # dereference the reference into the array it references
 
 ```
 
-
-
-Hashes
+## Hashes
 
 ```perl
 # hash values are not stored in any predictable order
@@ -200,9 +179,7 @@ say foreach keys %hash;
 say foreach values %hash;
 ```
 
-
-
-Constants  and Static Variables
+## Constants  and Static Variables
 
 ```perl
 # contants can be create in perl as follows
@@ -221,9 +198,7 @@ use feature 'state';
 state $n = 10; # static variable will not be garbage collected for the entire runtime of the script. So if you use it in a function, consecutive function calls will remember the value.
 ```
 
-
-
-Conditionals 
+## Conditionals 
 
 ```perl
 if ( $x == $y ) {
@@ -264,9 +239,7 @@ if ($hash{$x}) {
 say $x > $y ? 'x' : 'y';
 ```
 
-
-
-Loops 
+## Loops 
 
 ```perl
 # iterate over a quote word list
@@ -295,9 +268,7 @@ foreach my $s (@arr) {
 }
 ```
 
-
-
-Default Variables 
+## Default Variables 
 
 ```perl
 # https://perldoc.perl.org/perlvar.html
@@ -344,9 +315,7 @@ say $^V; # version of perl
 $| = 1; # this turns on outoflush 
 ```
 
-
-
-Operators 
+## Operators 
 
 ```perl
 # $x = 1 + 2;
@@ -416,9 +385,7 @@ say qw(one two three) ## returns a list
 # similar to mathematics
 ```
 
-
-
-Context
+## Context
 
 ```perl
 # perl supports two contexts list and scalar
@@ -437,9 +404,7 @@ if ( wantarray() ) {
 # https://perlmaven.com/scalar-and-list-context-in-perl
 ```
 
-
-
-Regular Expressions
+## Regular Expressions
 
 ```perl
 # string replacement
@@ -462,8 +427,6 @@ my $match =~ /(line)/;
 my $s = "this is a string";
 my @match = $s =~ /i(.)/g;
 
-
-
 # . 1 charater
 # + 1 or more 
 # * 0 or more 
@@ -483,9 +446,7 @@ my @match = $s =~ /i(.)/g;
 # https://perldoc.perl.org/perlre.html
 ```
 
-
-
-Functions and Subroutines 
+## Functions and Subroutines 
 
 ```perl
 # Subroutines and Functions are essentially the same thing in perl 
@@ -532,7 +493,6 @@ $ref-&gt;();
 my $ref = sub { say "anonymously, yours"};
 $ref-&gt;();
 
-
 # refrence an anonymous function  
 my $ref = func();
 $ref-&gt;();
@@ -544,9 +504,7 @@ sub func {
 }
 ```
 
-
-
-References 
+## References 
 
 ```perl
 # References are smaller pieces of memory refer to larger pieces of memory. They are useful for working with arrays, hashes, and functions.
@@ -586,7 +544,6 @@ $ref-&gt;();
 my $ref = sub { say "anonymously, yours"};
 $ref-&gt;();
 
-
 # refrence an anonymous function 
 my $ref = func();
 $ref-&gt;();
@@ -603,9 +560,7 @@ say ref($r);
 # will return 'ARRAY'		
 ```
 
-
-
-File I/O 
+## File I/O 
 
 ```perl
 # perl reads files as a stream 
@@ -627,7 +582,6 @@ close $fh;
 # since that defaults to global
 # A bareword is a word without quotes that Perl allows to behave as a string.
 
-
 # The OO file interface 
 use 5.18.0;
 use warnings;
@@ -639,7 +593,6 @@ my $file = IO::File-&gt;new("getline()) {
 }
 say "Done";
 
-
 # Binary Files 
 
 use 5.18.0;
@@ -650,7 +603,6 @@ my $filename = 'pic.jpg';
 my $copyfilename = 'copypic.jpg' 
 
 my $file = IO::File-&gt;new("new("&gt; $copyfilename") or die "Cannot open output file $!";
-
 
 # binmode is for Windows, mostly and it doesn't hurt anything if not needed.
 $file-&gt;binmode;
@@ -664,9 +616,7 @@ while (my $len = $file-&gt;read($buffer, 102400)) {
 say "Done";
 ```
 
-
-
-Built In Functions 
+## Built In Functions 
 
 ```perl
 # https://perldoc.perl.org/index-functions-by-cat.html
@@ -763,9 +713,7 @@ sub version {
 ## End example module Simple.pm 
 ```
 
-
-
-Best Practices 
+## Best Practices 
 
 ```perl
 # use ending semicolons 
@@ -798,9 +746,7 @@ sub func_name { .... }
 local #temp assigns a new value to a global variable and is a relic 
 ```
 
-
-
-Text Input
+## Text Input
 
 ```perl
 use feature 'say';
@@ -818,20 +764,12 @@ if ($answer =~ /blue/i) {
 }
 ```
 
+## References
 
-
-References  And Further Reading
-
-Most of these notes are from Bill Weinman's course on Lynda.com 
-
-Bill Weinman [http://perl.bw.org](http://perl.bw.org)
-
-Lynda.com [https://www.lynda.com/Perl-tutorials/Perl-5-Essential-Training/447321-2.html](https://www.lynda.com/Perl-tutorials/Perl-5-Essential-Training/447321-2.html)
-
-[https://www.thegeekstuff.com/2010/01/20-killer-perl-programming-tips-for-beginners-on-unix-linux-os](https://www.thegeekstuff.com/2010/01/20-killer-perl-programming-tips-for-beginners-on-unix-linux-os)
-
-[https://perlmaven.com](https://perlmaven.com)
-
-[https://learn.perl.org/docs/keywords.html#perlvar](https://learn.perl.org/docs/keywords.html#perlvar)
-
-[https://stackoverflow.com/questions/6162484/why-does-modern-perl-avoid-utf-8-by-default](https://stackoverflow.com/questions/6162484/why-does-modern-perl-avoid-utf-8-by-default)
+- Most of these notes are from Bill Weinman's course on Lynda.com 
+- Bill Weinman [http://perl.bw.org](http://perl.bw.org)
+- Lynda.com [https://www.lynda.com/Perl-tutorials/Perl-5-Essential-Training/447321-2.html](https://www.lynda.com/Perl-tutorials/Perl-5-Essential-Training/447321-2.html)
+- [https://www.thegeekstuff.com/2010/01/20-killer-perl-programming-tips-for-beginners-on-unix-linux-os](https://www.thegeekstuff.com/2010/01/20-killer-perl-programming-tips-for-beginners-on-unix-linux-os)
+- [https://perlmaven.com](https://perlmaven.com)
+- [https://learn.perl.org/docs/keywords.html#perlvar](https://learn.perl.org/docs/keywords.html#perlvar)
+- [https://stackoverflow.com/questions/6162484/why-does-modern-perl-avoid-utf-8-by-default](https://stackoverflow.com/questions/6162484/why-does-modern-perl-avoid-utf-8-by-default)

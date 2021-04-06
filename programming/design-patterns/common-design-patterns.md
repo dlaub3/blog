@@ -5,12 +5,11 @@ draft: false
 description: "An overview of common software design patterns"
 tags: ["ecmascript", "design patterns"]
 categories: ["engineering"]
+toc: true
 
 ---
 
-
-
-##### Constructor Pattern
+## Constructor Pattern
 
 The constructor pattern allows you to construct multiple objects of the same kind. Here is an example of a cookie constructor. 
 
@@ -42,15 +41,9 @@ noBake.bake();
 noBake.eat();
 ```
 
-
-
-
-
-##### Factory Pattern 
+## Factory Pattern 
 
 The factory pattern is a creational design pattern. It allows you to create objects without knowing the implementation details. 
-
-
 
 ```js
 "use strict";
@@ -95,11 +88,7 @@ noBake.eat();
 
 ```
 
-
-
-
-
-##### Singleton Pattern
+## Singleton Pattern
 
 The singleton pattern is used to restrict an object to only one instance. It is commonly used with database connections, so the application will use the same connection for all operations.
 
@@ -123,7 +112,6 @@ class CookieJar {
   }
 }
 
-
 let cookieJar = (CookieJar) => ({
   cookies: null,
   getCookies(n) {
@@ -140,7 +128,6 @@ let cookieJar = (CookieJar) => ({
   makeCookies() {
     this.cookies = new CookieJar();
   }
-
 });
 
 cookieJar = cookieJar(CookieJar);
@@ -153,11 +140,7 @@ cookieJar.getCookies(); // "No more cookies"
 console.log(sister === brother); // True  ...ok maybe not the best example
 ```
 
-
-
-
-
-##### Decorator 
+## Decorator 
 
 A decorator allows you to add functionality to an instance of an object without affecting the original. It can be thought of as a wrapper that provides some desired behavior. Some languages like Python already have built in decorators. But if your language doesn't support decorators natively, you can still build your own. 
 
@@ -182,7 +165,6 @@ class CookieJar {
   }
 }
 
-
 let cookieJar = (CookieJar) => ({
   cookies: null,
   getCookies(n) {
@@ -200,7 +182,6 @@ let cookieJar = (CookieJar) => ({
     this.cookies = new CookieJar();
     console.log(`There are now ${this.cookies.number} delicious cookies in the cookie jar.`);
   }
-
 });
 
 let cookieJarDecorator = (cookieJar) => {
@@ -210,22 +191,15 @@ let cookieJarDecorator = (cookieJar) => {
   }
 };
 
-
 cookieJar = cookieJarDecorator(cookieJar);
 cookieJar = cookieJar(CookieJar);
 
 cookieJar.makeCookies();
 ```
 
-
-
-
-
-##### Flyweight 
+## Flyweight 
 
 The flyweight pattern is used to keep memory consumption to a minimum when creating a large number of similar objects. 
-
-
 
 ```js
 "use strict";
@@ -278,14 +252,8 @@ let chocolateChip4 = cookieFlyweightFactory.make({ kind: "Chocolate Chip", numbe
 cookieFlyweightFactory.count(); // 3
 ```
 
+## References
 
-
-
-
-##### References 
-
-https://www.pluralsight.com/courses/javascript-practical-design-patterns
-
-https://medium.com/google-developers/exploring-es7-decorators-76ecb65fb841
-
-https://msdn.microsoft.com/en-us/magazine/hh273390.aspx	
+- https://www.pluralsight.com/courses/javascript-practical-design-patterns
+- https://medium.com/google-developers/exploring-es7-decorators-76ecb65fb841
+- https://msdn.microsoft.com/en-us/magazine/hh273390.aspx	
