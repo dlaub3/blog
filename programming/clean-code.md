@@ -162,10 +162,7 @@ if(user.accountLevel > accountLevels.standard) {
 
 ## References and Further Learning: 
 
-- Clean Code Cheat Sheet
-- https://www.bbv.ch/images/bbv/pdf/downloads/V2_Clean_Code_V3.pdf
-- Uncle Bob's Clean Code
-- https://www.safaribooksonline.com/live-training/courses/clean-code/0636920194538
-- Cory House -- This post was based largely on Cory's course Writing Clean Code for Humans
-- https://www.pluralsight.com/courses/writing-clean-code-humans
+- [Clean Code Cheat Sheet](https://www.bbv.ch/images/bbv/pdf/downloads/V2_Clean_Code_V3.pdf)
+- [Uncle Bob's Clean Code](https://www.safaribooksonline.com/live-training/courses/clean-code/0636920194538)
+- This post was based largely on Cory's course [Writing Clean Code For Humans](https://www.pluralsight.com/courses/writing-clean-code-humans)
 

@@ -6,7 +6,7 @@ draft: false
 
 ---
 
-**About the site:**
+## About the site
 
 This site is powered by Hugo and  Amazon Web Services.  It performs well and I'm proud of it.
 
@@ -18,6 +18,6 @@ This site is powered by Hugo and  Amazon Web Services.  It performs well and I'm
 
 I use a Linode sever as my 'devops box'. I have Jenkins installed via Docker with automatic SSL via Let's Encrypt and Traefik. CI is a nice thing to have ;). 
 
-**About me:**
+## About me
 
 I'm a software engineer and I love programming the web. My background includes working with the LAMP stack on the backend and React/TypeScript on the frontend. I'm an AWS Certified Associate Solutions Architect.
