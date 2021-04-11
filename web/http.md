@@ -1,11 +1,15 @@
 ---
-title: "HTTP"
-date: 2018-08-28
 draft: false
-description: What is HTTP?
+date: 2018-08-28
+author:
+title: "Understanding HTTP"
+description: A quick introduction to the HTTP specification
 tags: ['http', 'http/2']
 categories: ['web']
 toc: true
+meta:
+  description: A quick introduction to the HTTP specification
+  keywords: "http, http/2"
 
 ---
 

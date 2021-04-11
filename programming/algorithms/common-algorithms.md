@@ -1,11 +1,14 @@
 ---
-title: "Common Algorithms"
 date: 2018-08-11
 draft: false
+author:
+title: "Common Algorithms"
 description: "An overview of common search and sort algorithms"
 tags: ['algorithms', 'ecmascript']
 categories: ['engineering']
 toc: true
+meta:
+  description: "An overview of common search and sort algorithms"
 
 ---
 

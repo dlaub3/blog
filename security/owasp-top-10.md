@@ -1,11 +1,15 @@
 ---
-title: "2017 OWASP Top 10"
 date: 2018-08-19T15:20:10-04:00
 draft: false
-description: The 10 most critical security vulnerabilities. 
+author:
+title: "2017 OWASP Top 10"
+description: The 10 most critical security vulnerabilities in 2017. 
 tags: ['owasp', 'owasp top 10']
 categories: ['security']
 toc: true
+meta:
+  description: The 10 most critical security vulnerabilities in 2017.
+  keywords: "owasp, security"
 
 ---
 

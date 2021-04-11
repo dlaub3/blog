@@ -1,11 +1,15 @@
 ---
-title: "Common Data Structures"
 date: 2018-08-11T14:41:27-04:00
 draft: false
+author:
+title: "Common Data Structures"
 description: "An overview of common data structures"
 tags: ['data structures', 'ecmascript']
 categories: ['engineering']
 toc: true
+meta: 
+  description: "An overview of common data structures"
+  keywords: "stack, queue, heap, binary tree,trie, hash, graph"
 
 ---
 

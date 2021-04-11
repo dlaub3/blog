@@ -1,11 +1,15 @@
 ---
-title: "Practical Python Primer"
 date: 2018-07-28
-description: "Basic Python language mechanics"
 draft: false
+author:
+title: "Practical Python Primer"
+description: "Basic Python language mechanics"
 tags: ['python', "language basics"]
 categories: ["python", "language basics"]
 toc: true
+meta:
+  description: "Basic Python language mechanics"
+  meta: "learning python"
 
 ---
 

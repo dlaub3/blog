@@ -1,11 +1,16 @@
 ---
-title: "PHP Include VS Require"
 date: 2018-07-22
-description: "What are the differences between include and require in PHP"
 draft: false
+author:
+title: "PHP Include VS Require"
+description: "What are the differences between include and require in PHP"
 tags: ["PHP"]
 categories: ['php']
 toc: false
+meta:
+  description: "What are the differences between include and require in PHP"
+  keywords: "php"
+
 
 ---
 

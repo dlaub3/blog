@@ -1,11 +1,14 @@
 ---
-title: "Common Design Patterns"
 date: 2018-08-11T16:36:27-04:00
 draft: false
+author:
+title: "Common Design Patterns"
 description: "An overview of common software design patterns"
 tags: ["ecmascript", "design patterns"]
 categories: ["engineering"]
 toc: true
+meta:
+  description: "An overview of common software design patterns"
 
 ---
 

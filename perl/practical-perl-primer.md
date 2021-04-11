@@ -1,11 +1,15 @@
 ---
-title: "Practical Perl Primer"
 date: 2018-07-22
+draft: false
+author:
+title: "Practical Perl Primer"
 tags: ["perl", "language basics"]
 categories: ['perl']
-description: "Basic Perl language mechanics"
-draft: false
 toc: true
+meta:
+  description: "Basic Perl language mechanics"
+  keywords: "learning perl"
+
 
 ---
 

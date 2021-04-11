@@ -1,11 +1,15 @@
 ---
-title: "Big O"
 date: 2018-08-11T00:00:01
 draft: false
+author:
+title: "Big O"
 description: "A basic overview of Big-O Notation"
 tags: ['big O', 'algorithms']
 categories: ['engineering']
 toc: false
+meta:
+  description: "A basic overview of Big-O Notation"
+  meta: "big o notation"
 
 ---
 

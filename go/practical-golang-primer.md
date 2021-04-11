@@ -1,11 +1,15 @@
 ---
-title: "Practical Golang Primer"
 date: 2018-08-18
 draft: false
+author: 
+title: "Practical Golang Primer"
 description: Some basic golang examples
 tags: ['golang', 'language basics']
 categories: ['golang']
 toc: true
+meta:
+  description: Some basic golang examples
+  keywords: "learning golang"
 
 ---
 

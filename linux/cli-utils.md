@@ -1,11 +1,15 @@
 ---
-title: "CLI Utils"
 date: 2018-07-29
+draft: false
+author:
+title: "CLI Utils"
+description: "Useful CLI Utilities"		
 tags: ["bash", 'linux', 'cli']
 categories: ['bash', 'linux']
-draft: false
-description: "Useful CLI Utilities"		
 toc: true
+meta:
+  description: "Useful CLI Utilities"		
+
 
 ---
 

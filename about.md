@@ -1,8 +1,10 @@
 ---
-title: "About"
 date: 2018-07-04
-description: "About the site and it's author"
 draft: false
+author:
+title: "About"
+description: "About the site and it's author"
+meta:
 
 ---
 
