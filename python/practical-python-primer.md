@@ -4,12 +4,9 @@ draft: false
 author:
 title: "Practical Python Primer"
 description: "Basic Python language mechanics"
-tags: ['python', "language basics"]
-categories: ["python", "language basics"]
+tags: ["python", "language basics"]
+categories: ["python"]
 toc: true
-meta:
-  description: "Basic Python language mechanics"
-  meta: "learning python"
 
 ---
 

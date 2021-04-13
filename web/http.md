@@ -7,9 +7,6 @@ description: A quick introduction to the HTTP specification
 tags: ['http', 'http/2']
 categories: ['web']
 toc: true
-meta:
-  description: A quick introduction to the HTTP specification
-  keywords: "http, http/2"
 
 ---
 

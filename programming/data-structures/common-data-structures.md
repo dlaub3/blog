@@ -7,9 +7,6 @@ description: "An overview of common data structures"
 tags: ['data structures', 'ecmascript']
 categories: ['engineering']
 toc: true
-meta: 
-  description: "An overview of common data structures"
-  keywords: "stack, queue, heap, binary tree,trie, hash, graph"
 
 ---
 

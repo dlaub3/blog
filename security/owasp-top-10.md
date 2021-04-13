@@ -7,9 +7,6 @@ description: The 10 most critical security vulnerabilities in 2017.
 tags: ['owasp', 'owasp top 10']
 categories: ['security']
 toc: true
-meta:
-  description: The 10 most critical security vulnerabilities in 2017.
-  keywords: "owasp, security"
 
 ---
 

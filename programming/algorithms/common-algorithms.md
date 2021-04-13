@@ -7,8 +7,6 @@ description: "An overview of common search and sort algorithms"
 tags: ['algorithms', 'ecmascript']
 categories: ['engineering']
 toc: true
-meta:
-  description: "An overview of common search and sort algorithms"
 
 ---
 

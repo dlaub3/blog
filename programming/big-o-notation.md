@@ -7,9 +7,6 @@ description: "A basic overview of Big-O Notation"
 tags: ['big O', 'algorithms']
 categories: ['engineering']
 toc: false
-meta:
-  description: "A basic overview of Big-O Notation"
-  meta: "big o notation"
 
 ---
 

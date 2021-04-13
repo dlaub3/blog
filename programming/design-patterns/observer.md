@@ -7,9 +7,6 @@ description: Implementing the observer design pattern.
 categories: ["engineering"]
 tags: ["ecmascript"]
 toc: false
-meta:
-  description: Implementing the observer design pattern.
-  keywords:
 
 ---
 

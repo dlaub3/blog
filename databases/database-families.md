@@ -7,8 +7,6 @@ description: "A brief overview of different families of databases"
 tags: ['sql', 'database', 'nosql']
 categories: ['database']
 toc: true
-meta:
-  description: "A brief overview of different families of databases"
 
 ---
 

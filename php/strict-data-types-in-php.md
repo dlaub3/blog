@@ -7,9 +7,6 @@ description: "How to use strict data types in PHP"
 tags: ["PHP"]
 categories: ["PHP"]
 toc: true
-meta:
-  description: "How to use strict data types in PHP"
-  keywords:
 
 ---
 

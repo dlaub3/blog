@@ -6,9 +6,6 @@ title: "Practical Perl Primer"
 tags: ["perl", "language basics"]
 categories: ['perl']
 toc: true
-meta:
-  description: "Basic Perl language mechanics"
-  keywords: "learning perl"
 
 
 ---

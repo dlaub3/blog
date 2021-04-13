@@ -7,8 +7,6 @@ description: "Useful CLI Utilities"
 tags: ["bash", 'linux', 'cli']
 categories: ['bash', 'linux']
 toc: true
-meta:
-  description: "Useful CLI Utilities"		
 
 
 ---

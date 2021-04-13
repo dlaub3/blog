@@ -7,9 +7,6 @@ description: Some basic golang examples
 tags: ['golang', 'language basics']
 categories: ['golang']
 toc: true
-meta:
-  description: Some basic golang examples
-  keywords: "learning golang"
 
 ---
 

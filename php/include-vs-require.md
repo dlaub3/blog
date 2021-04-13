@@ -7,10 +7,6 @@ description: "What are the differences between include and require in PHP"
 tags: ["PHP"]
 categories: ['php']
 toc: false
-meta:
-  description: "What are the differences between include and require in PHP"
-  keywords: "php"
-
 
 ---
 
