@@ -3,6 +3,7 @@ date: 2018-07-22
 draft: false
 author:
 title: "Practical Perl Primer"
+description: "An intro to the Perl"
 tags: ["perl", "language basics"]
 categories: ['perl']
 toc: true
