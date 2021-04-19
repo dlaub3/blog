@@ -7,6 +7,7 @@ description: "10 Principles for learning the art of writing clean code."
 tags: ['clean code', 'coding']
 categories: ['coding']
 toc: true
+fresh: false
 
 ---
 

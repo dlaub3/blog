@@ -7,6 +7,7 @@ description: "How to use strict data types in PHP"
 tags: ["PHP"]
 categories: ["PHP"]
 toc: true
+fresh: false
 
 ---
 

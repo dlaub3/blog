@@ -7,6 +7,7 @@ description: "What are the differences between include and require in PHP"
 tags: ["PHP"]
 categories: ['php']
 toc: false
+fresh: false
 
 ---
 

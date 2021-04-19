@@ -7,6 +7,7 @@ description: "An intro to the Perl"
 tags: ["perl", "language basics"]
 categories: ['perl']
 toc: true
+fresh: false
 
 
 ---

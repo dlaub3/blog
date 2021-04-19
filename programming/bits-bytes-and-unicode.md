@@ -7,6 +7,7 @@ description: What is ASCII, UTF-8, and Unicode
 tags: ['unicode', 'utf-8']
 categories: ['encoding']
 toc: false
+fresh: false
 
 ---
 

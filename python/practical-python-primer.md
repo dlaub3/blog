@@ -7,6 +7,7 @@ description: "Basic Python language mechanics"
 tags: ["python", "language basics"]
 categories: ["python"]
 toc: true
+fresh: false
 
 ---
 

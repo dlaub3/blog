@@ -6,6 +6,7 @@ draft: false
 tags: ["database", "nosql", "memcached"]	
 categories: ["database"]
 toc: false
+fresh: false
 
 ---
 

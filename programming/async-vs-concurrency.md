@@ -7,6 +7,7 @@ description: Comparing JavaScript async with Go's goroutines
 tags: ['golang', 'ecmascript', 'async', 'concurrency']
 categories: ['async', 'concurrency']
 toc: true
+fresh: false
 
 ---
 

@@ -7,6 +7,7 @@ description: "An overview of common data structures"
 tags: ['data structures', 'ecmascript']
 categories: ['engineering']
 toc: true
+fresh: false
 
 ---
 

@@ -7,6 +7,7 @@ description: A quick introduction to the HTTP specification
 tags: ['http', 'http/2']
 categories: ['web']
 toc: true
+fresh: false
 
 ---
 
