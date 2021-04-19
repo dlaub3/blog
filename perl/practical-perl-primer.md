@@ -28,7 +28,7 @@ perldoc perlfaq
 ## Variables and Values 
 
 ```perl
-# represent a scalar value with $, Perl uses duck typeing for scalar value
+# represent a scalar value with $, Perl uses duck typing for scalar value
 my $n = 42;
 
 # represent arrays with @
@@ -45,7 +45,7 @@ my %hash = (one => 1, two => 2, three => 3);
 $list = ('one', 'one', 'three');
 
 
-$var = 0 + $var; # force num 
+$var = 0 + $var; # force number 
 $var = '' . $var; # force string
 ```
 
@@ -64,7 +64,7 @@ sub main {
 ## Assignment Examples 
 
 ```perl
-my ( $x, $y, $z ) = ( 1, 2, 3 ); # assign multiple scalare variables from a list
+my ( $x, $y, $z ) = ( 1, 2, 3 ); # assign multiple scalar variables from a list
 
 my @array = ( 1, 2, 3); # create an array from a list
 
@@ -103,9 +103,9 @@ say $num2;
 ## Logical Values 
 
 ```perl
-# false values: '', 0, []  in general things that are empty or evalute to 0
+# false values: '', 0, []  in general things that are empty or evaluate to 0
 # everything else evaluates to true
-# this is becuase of Perls duck typing.
+# this is because of Perl's duck typing.
 https://perlmaven.com/boolean-values-in-perl
 ```
 
@@ -171,7 +171,7 @@ my %hash = (
 while ( my ($k, $v) = each %hash ) {
   say "$k -> $v";
 }
-## refrence an anonymous function
+## reference an anonymous function
 foreach my $k (sort(keys %hash)) {
   my $v = $hash{$k};
   say "$k -> $v";
@@ -184,7 +184,7 @@ say foreach values %hash;
 ## Constants  and Static Variables
 
 ```perl
-# contants can be create in perl as follows
+# constants can be created in Perl as follows
 use contant {
   PIE => 3.1415
   TRUE => 1, 
@@ -195,7 +195,7 @@ use contant {
 sub PIE { 3.1415 };
 
 
-# Perl 5.10 + support static variabls 
+# Perl 5.10 + support static variables 
 use feature 'state';
 state $n = 10; # static variable will not be garbage collected for the entire runtime of the script. So if you use it in a function, consecutive function calls will remember the value.
 ```
@@ -277,7 +277,7 @@ foreach my $s (@arr) {
 # http://www.perlmonks.org/?node_id=353259
 
 foreach ( @arr ) {
-  says $_;  # $_ optional value ommited will use the default variable $_
+  says $_;  # $_ optional value omitted will use the default variable $_
 }
 
 say foreach @arr;
@@ -313,8 +313,8 @@ say $0   # path of script
 say $^o; # system name 
 say $^V; # version of perl 
 
-# autoflush variable, the system flushes the buffer at it's own disgression 
-$| = 1; # this turns on outoflush 
+# autoflush variable, the system flushes the buffer at it's own discretion 
+$| = 1; # this turns on autoflush 
 ```
 
 ## Operators 
@@ -347,7 +347,7 @@ $x = $x + 5;
 "str" le "str" # less than or equal to
 "str" gt "str"
 
-## logical opperators
+## logical operators
 use constant { TRUE => 1, FALSE => "" }
 and ## ( true and true) == true
 or  ## ( false and true) == true 
@@ -374,7 +374,7 @@ foreach my $i (1...10) {
     print "$i ":
 }
 
-# String concatentation operator 
+# String concatenation operator 
 say "str" . "ing"; 
 
 ## Quote operators 
@@ -390,15 +390,15 @@ say qw(one two three) ## returns a list
 ## Context
 
 ```perl
-# perl supports two contexts list and scalar
+# Perl supports two contexts list and scalar
 my @arr = qw(one two three four five);
 # an array can be used in list context or scalar context 
 say foreach @array; # list context will iterate over each element. 
 say scalar @array; # because we are accessing a scalar value it is the length of the arrays
 
-# context is important as it affect how certain functions and structure bahave in perl. 
+# context is important as it affects how certain functions and structure behave in Perl. 
 
-# A sub can determine what context it was called in by using wantarray.
+# A sub can determine what context it was called in by using `wantarray`.
 if ( wantarray() ) {
    print "list\n";
 }
@@ -429,7 +429,7 @@ my $match =~ /(line)/;
 my $s = "this is a string";
 my @match = $s =~ /i(.)/g;
 
-# . 1 charater
+# . 1 character
 # + 1 or more 
 # * 0 or more 
 # whildcard matching is greedy use *? to prevent greedy
@@ -451,16 +451,16 @@ my @match = $s =~ /i(.)/g;
 ## Functions and Subroutines 
 
 ```perl
-# Subroutines and Functions are essentially the same thing in perl 
-# Gernally, it's best to return a scalar, a list, or a reference  
-# IMPORTANT: The context a function is called in will propogate to the return value of the function.So the context of the return value will be either scalar or list based on how the context of the function. 
-# A sub can determine what context it was called in by using wantarray.
+# Subroutines and Functions are essentially the same thing in Perl 
+# Generally, it's best to return a scalar, a list, or a reference  
+# IMPORTANT: The context a function is called in will propagate to the return value of the function.So the context of the return value will be either scalar or list based on how the context of the function. 
+# A sub can determine what context it was called in by using `wantarray`.
 if ( wantarray() ) {
    print "list\n";
 }
 # Function names have global scope and they can be called before they are defined in a script.
-# Functions always return. Either explicitly by calling return or the last statement executed will be implicitly returned. It's reccomended to always explicitly return
-# Perl supportes closures and higher order functions and is considered a functional programming languages. 
+# Functions always return. Either explicitly by calling return or the last statement executed will be implicitly returned. It's recommended to always explicitly return
+# Perl supports closures and higher order functions and is considered a functional programming languages. 
 # https://hop.perl.plover.com/
 # http://www.perlmonks.org/?node_id=450922
 
@@ -495,12 +495,12 @@ $ref-&gt;();
 my $ref = sub { say "anonymously, yours"};
 $ref-&gt;();
 
-# refrence an anonymous function  
+# reference an anonymous function  
 my $ref = func();
 $ref-&gt;();
 
 sub func {
-	# This is a closure in perl.
+	# This is a closure in Perl.
 	my $s = "I am a local variable";
 	return sub { say $s };
 }
@@ -518,7 +518,7 @@ say foreach @{$ref}; # dereference the reference into the array it references
 # create a reference to an anonymous array
 my $ref = [qw( one, two, three, four )];
 
-# parens alone creat an anonymous list 
+# parenthesis alone create an anonymous list 
 $ref = ( one, two, three, four );
 $ref-&gt;[0];
 
@@ -546,12 +546,12 @@ $ref-&gt;();
 my $ref = sub { say "anonymously, yours"};
 $ref-&gt;();
 
-# refrence an anonymous function 
+# reference an anonymous function 
 my $ref = func();
 $ref-&gt;();
 
 sub func {
-	# this is a closure in perl.
+	# this is a closure in Perl.
 	my $s = "I am a local variable";
 	return sub { say $s };
 }
@@ -565,11 +565,11 @@ say ref($r);
 ## File I/O 
 
 ```perl
-# perl reads files as a stream 
+# Perl reads files as a stream 
 
 # &lt; read
 # + read and overwrite 
-# &gt;&gt; apend 
+# &gt;&gt; append 
 
 my $filename = "about.txt";
 open (my $fh, '&lt;&#039;, $filename ) or die &quot;Can&#039;t open file: $!&quot;;
@@ -584,7 +584,7 @@ close $fh;
 # since that defaults to global
 # A bareword is a word without quotes that Perl allows to behave as a string.
 
-# The OO file interface 
+# The IO file interface 
 use 5.18.0;
 use warnings;
 use IO::File;
@@ -606,7 +606,7 @@ my $copyfilename = 'copypic.jpg'
 
 my $file = IO::File-&gt;new("new("&gt; $copyfilename") or die "Cannot open output file $!";
 
-# binmode is for Windows, mostly and it doesn't hurt anything if not needed.
+# binmode is for Windows mostly, it doesn't hurt anything if not needed.
 $file-&gt;binmode;
 $copy-&gt;binmode;
 
@@ -624,7 +624,7 @@ say "Done";
 # https://perldoc.perl.org/index-functions-by-cat.html
 # string functions 
 say()   # say outputs a new line at the end of the output Perl 5.10+
-print() # print and say default to sandard stream for their output 
+print() # print and say default to standard stream for their output 
 
 my @a = (1, 2, 3, 4);
 my %h = (one =&gt; 1, two =&gt; 2, three =&gt; 3);
@@ -642,10 +642,10 @@ say length $string;
 
 say chomp $string. # removes line ending in string
 
-say substr $string, 5, 7; # return a substing 
+say substr $string, 5, 7; # return a substring 
 say substr($sring, 5, 7, 'too'); # replace
 
-say index $string, 'is'; # returns index of first occurance, 0 index.
+say index $string, 'is'; # returns index of first occurrence, 0 index.
 say index $string, 'xis'; # returns -1 if not found
 say index $string, 'is', 10; # start matching after 10 characters.
 say rindex $string, 'is'; # match from right
@@ -688,10 +688,10 @@ my $t = time(); # epoch time
 my $timestring = localtime($t); #convert epoch to a list of time or a string,
 
 # formatting time
-# time in perl is similar to the unix C liberary 
+# time in Perl is similar to the Unix C library 
 my ($sec, $min, $hour, $mday, $mon, $year, $wday, $yday, $isdst ) = localtime($t);
 $mon ++; # helps with 0 based 
-$year += 1900; # the year needs to have this added since it's an orbitol year
+$year += 1900; # the year needs to have this added since it's an orbital year
 
 # add leading zeros to numerics for display 
 foreach ($mon, $mday, $hour, $min, $sec) {
@@ -710,7 +710,7 @@ sub version {
 	return $VERSION;
 }
 
-1; # for compatability, end with a true value
+1; # for compatibility, end with a true value
 
 ## End example module Simple.pm 
 ```
@@ -721,7 +721,7 @@ sub version {
 # use ending semicolons 
 # consistently format code blocks
 # consistently name things
-# perl best practice is lowercase variable names
+# Perl best practice is lowercase variable names
 
 my $variable_name;
 Package DL::Class;
@@ -741,7 +741,7 @@ use constant DEBUG =&gt; TRUE;
 sub func_name { .... }
 
 # use simple terse comments and whitespace 
-# strict mode is on by default in perl 5.18.0 + 
+# strict mode is on by default in Perl 5.18.0 + 
 # use warnings is optional 
 # you can use 'no warnings' inside of a sub routine 
 # Try not to use the 'local' keyword. 

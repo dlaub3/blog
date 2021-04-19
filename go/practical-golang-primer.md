@@ -18,9 +18,9 @@ https://golang.org/pkg/builtin
 
 ## Language Features
 
-- go is a compiled language. It is based on C langauge families. 
-- go tool can run without precompiling 
-- compiling produces os specific executables
+- go is a compiled language. It is based on C language families. 
+- go tool can run without pre-compiling 
+- compiling produces OS specific executables
 - statically typed 
 - object oriented with interfaces
 - supports polymorphism with interfaces
@@ -73,7 +73,7 @@ cd $HOME/go # $HOME/go is the default on Unix
 mkdir src bin pkg
 set GOPATH=$PWD
 export GOPATH=$(go env GOPATH)
-export PATH=$PATH:$(go env GOPATH)/bin # Add the bin folder to you path so you can run your programms 
+export PATH=$PATH:$(go env GOPATH)/bin # Add the bin folder to you path so you can run your programs 
 
 cd src
 mkdir -p github.com/username
@@ -136,11 +136,11 @@ The `int`, `uint`, and `uintptr` types are usually 32 bits wide on 32-bit system
 When you need an integer value you should use `int` unless you have a specific reason to use a sized or unsigned integer type. Go is statically typed so you have to set the type. You can set the type explicitly or implicitly.
 
 ```go
-// Explicite typeing
+// Explicit typing
 var myInteger int = 43;
 var myString string = "This is a string";
 
-// Implicite typeing, the variable type is infered at runtime. 
+// Implicit typing, the variable type is inferred at runtime. 
 var myInteger := 43;
 var myString := "This is a string";
 
@@ -222,7 +222,7 @@ import (
 	"fmt"
 	"strings"
 )
-str1 := "implicite string"
+str1 := "implicit string"
 
 strings.ToUpper
 strings.Title
@@ -331,7 +331,7 @@ func main() {
 	delete(cookie, "Butter Scotch")
 
 	if c, ok := cookie["Chocolate Chip"]; ok {
-		fmt.Printf("Chocolate chip cookie are %v", c)
+		fmt.Printf("Chocolate chip cookie's are %v", c)
 	}
 }
 ```
@@ -357,7 +357,7 @@ func main() {
 	milkChocolate := Chocolate{
 		origin:      "Pennsylvania",
 		weight:      1,
-		ingredients: []string{"milk", "almonds", "choloate", "sugar"},
+		ingredients: []string{"milk", "almonds", "chocolate", "sugar"},
 	}
 	
 	fmt.Println(milkChocolate.origin)

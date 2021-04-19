@@ -24,7 +24,7 @@ I spent some time recently considering how JavaScript's asynchronous execution c
 
 > following in sequence
 >
-> [Webster's Dictrionary](https://www.merriam-webster.com/dictionary/sequential)
+> [Webster's Dictionary](https://www.merriam-webster.com/dictionary/sequential)
 
 Code is read and executed in sequence, from the top of the file to the bottom. That does not mean that one line of code must finish execution before the next line of code can be read. But it does imply an order of operations. Obviously this code will produce the numbers 1 to 4 in order. 
 
@@ -39,7 +39,7 @@ console.log(4);
 
 > happening, existing, or arising at precisely the same time
 >
-> [Webster's Dictrionary](https://www.merriam-webster.com/dictionary/synchronous)
+> [Webster's Dictionary](https://www.merriam-webster.com/dictionary/synchronous)
 
 Dictionary definitions of synchronous and asynchronous do not help when understanding how these terms are used in programming. I think the most helpful thing to consider is how an HTML page is parsed. When a   `<script src="script.js"></script>` tag is read, the browser will stop parsing the HTML, download the script, and then execute the JS before it continues to parse the rest of the HTML. This is how synchronous code executes. Synchronous code will block execution of the remaining lines until it has itself finished execution. In the example below one `say()` function must finish before the other can begin.
 
@@ -69,7 +69,7 @@ main();
 
 > not simultaneous or concurrent in time **:** not [synchronous](https://www.merriam-webster.com/dictionary/synchronous)
 >
-> [Webster's Dictrionary](https://www.merriam-webster.com/dictionary/asynchronous)
+> [Webster's Dictionary](https://www.merriam-webster.com/dictionary/asynchronous)
 
 Again, the dictionary definition isn't helpful. To use the HTML page example, when the HTML is being parsed and a ``<script src="script.js" async></script>`` (notice `async`) tag is encountered. The script will <u>not</u> prevent the HTML from being parsed. Instead, the browser will begin downloading the script while simultaneously parsing the HTML. Then, once the download has completed the script will be executed. So `async` refers to the ability continue performing one task, while waiting for another task to finish. That other task is commonly one that the application doesn't mange, like a database request, or downloading a remote resource, but it doesn't necessarily have to be. So asynchronous code is continuing to do work while waiting for something else to happen. Promises,  async/await, and generators can all be used to write asynchronous JavaScript. 
 

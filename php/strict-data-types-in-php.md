@@ -91,7 +91,7 @@ Exceptions: Integers may be passed to functions expecting a float.
 The following scalar type declarations are supported in PHP 7.0.
 
 - bool 
-- flaot
+- float
 - int
 - string 
 
@@ -119,7 +119,7 @@ PHP 7.0 added support for return type declarations. It allows the same types as 
 - callable 
 - self
 - bool 
-- flaot
+- float
 - int
 - string 
 

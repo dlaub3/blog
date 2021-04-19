@@ -60,7 +60,7 @@ Python was developed by Dutch mathematician Guido van Rossum who  is still the p
 
 ```python
 str = '''
-Muliline 
+multi-line 
 string here. 
 single quotes in here
 should be escaped.
@@ -135,7 +135,7 @@ dictionary = { 'one': 1, 'two': 2, 'three':3 }
 # OR 
 dictionary = dict( one =  1, two = 2, three = 3)
                   
-print(dictionary['one']) # this will cause an exeption if a key doesn't exist so 
+print(dictionary['one']) # this will cause an exception if a key doesn't exist so 
 # so use .get
 print(dictionary.get('five'))  
 print('one' in dictionary)
@@ -166,7 +166,7 @@ def main():
 
 ### Mixed Structures
 
-It's possible to store anything is a data sructrue because everything is an object and variables store references to objects. 
+It's possible to store anything in a data structure because everything is an object and variables store references to objects. 
 
 ## Conditionals 
 
@@ -275,7 +275,7 @@ print(a & b)
 ==
 != 
 
-# == does not compaire types only values. 
+# == does not compare types only values. 
 >>> 1 == '1'
 False
 >>> 1 == 1.0
@@ -293,7 +293,7 @@ not
 in # value in set
 not in # value not in set 
 is # same object identity
-is not # not same obect identity
+is not # not same object identity
 ```
 
 ## Operator Precedence 
@@ -361,7 +361,7 @@ https://www.geeksforgeeks.org/args-kwargs-python/
 def main():
     tupal = ('one', 'two', 'three')
 	say(*tupal)
-    dict = (one = 1, two = 2, thre = 3 )
+    dict = (one = 1, two = 2, three = 3 )
     
 
 def say(*args):
@@ -428,7 +428,7 @@ notdecorator()
 maybedecorator()
 
 # now maybe decorator has been redefined.
-# it is only accessibile from outer.
+# it is only accessible from outer.
 maybedecorator = outer(maybedecorator)
 maybedecorator()
 
@@ -477,7 +477,7 @@ if __name__ == '__main__': main()
 
 **Constructing an object.** 
 
-A constructor uses `__init__` to construct an object and initialize properties. The properties are prefixed with `_` as a convention. You access these properties with accessorts (setters/getters).
+A constructor uses `__init__` to construct an object and initialize properties. The properties are prefixed with `_` as a convention. You access these properties with accessors (setters/getters).
 
 Variables defined in a class are similar to static variables. 
 
@@ -588,7 +588,7 @@ readBin = open('img.jpg', 'rb')
 writeBin = open('img-copy.jpg', 'wb')
 
 while True:
-    buf = readBin.read(10240) # memomry use at a time
+    buf = readBin.read(10240) # memory use at a time
     if buf: 
         writeBin.write(buf)
         print('.', end='', flush=True)

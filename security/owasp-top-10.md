@@ -38,7 +38,7 @@ You may be getting the idea by now that a false sense of security is worse than 
 
 ## Cross Site Scripting (XSS) 
 
-Cross site scripting happens when an attacker is able to inject malicious  JavaScript into your website, or maybe it's just a malicious website  to begin with. Whatever the case, that JavaScript executes in the users browser and performs operations on their behalf. Cross site request forgery (CSRF) is a type of XSS. In this scenario a script might purchase something from another website that you left, but are still logged into.   That's why you should always use CSRF tokens for validatioen. Note: XSS is a good reason to be picky when using node modules ;) . 
+Cross site scripting happens when an attacker is able to inject malicious  JavaScript into your website, or maybe it's just a malicious website  to begin with. Whatever the case, that JavaScript executes in the users browser and performs operations on their behalf. Cross site request forgery (CSRF) is a type of XSS. In this scenario a script might purchase something from another website that you left, but are still logged into.   That's why you should always use CSRF tokens for validation. Note: XSS is a good reason to be picky when using node modules ;) . 
 
 ## Insecure Deserialization 
 
