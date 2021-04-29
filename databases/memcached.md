@@ -1,12 +1,13 @@
 ---
+quality: medium
+author:
 title: Memcashed
 date: 2018-07-29
-description: Absolute basics of memcached
 draft: false
+description: Absolute basics of memcached
 tags: ["database", "nosql", "memcached"]	
 categories: ["database"]
 toc: false
-fresh: false
 
 ---
 

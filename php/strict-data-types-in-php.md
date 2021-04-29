@@ -1,19 +1,20 @@
 ---
+quality: medium
+author:
+expired: true
 date: 2018-07-22
 draft: false
-author:
 title: "PHP Strict Data Types"
 description: "How to use strict data types in PHP"
 tags: ["PHP"]
 categories: ["PHP"]
 toc: true
-fresh: false
 
 ---
 
 ## The problem
 
-PHP doesn't require you to explicitly specify the type. This is referred to as weak typing or loosely typed.  And it's both good and bad.  It can make things easier for the programmer or it can make things hard to debug. 
+PHP doesn't require you to explicitly specify the type. This is referred to as weak typing or loosely typed. It can make things easier for the programmer or it can make things harder to debug. 
 
 ## Data types
 
@@ -85,7 +86,7 @@ PHP 7 added support for scalar type declarations. This must be enabled on a file
 declare(strict_types=1);
 ```
 
-Note: Enabling strict mode will affect return type declarations as well. Strict typing applies to function calls made from within the file that has strict typing enabled. So a function call from another file to a function in a file with strict typing enabled will not execute with strict typing unless that original file also has strict typing enabled.  Strict typing is only declared for scalar type declarations. 
+Note: Enabling strict mode will affect return type declarations as well. Strict typing applies to function calls made from within the file that has strict typing enabled. So a function call from another file to a function in a file with strict typing enabled will not execute with strict typing unless that original file also has strict typing enabled. Strict typing is only declared for scalar type declarations. 
 
 Exceptions: Integers may be passed to functions expecting a float. 
 
@@ -139,7 +140,7 @@ function strictTypes($var):array {
 
 **Weak mode vs strong mode**
 
-Weak mode allows type casting while strong mode strictly enforces types.   It's important to know when I strong or weak is enforced. 
+Weak mode allows type casting while strong mode strictly enforces types. It's important to know when I strong or weak is enforced. 
 
 If you have file A (strong) and file B (weak), then any reference to return types in file A will execute in strong mode even if it's called from file B. This is because file A is in strong mode. And return type declarations execute in the mode of the file containing them.  However, argument type declarations work differently. Argument type declarations in file A called in file B will execute in weak mode since file B is in weak mode. 
 

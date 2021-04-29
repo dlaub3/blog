@@ -1,10 +1,9 @@
 ---
+author:
 date: 2018-07-04
 draft: false
-author:
 title: "About"
 description: "About the site and it's author"
-fresh: false
 
 ---
 

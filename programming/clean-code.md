@@ -1,27 +1,27 @@
 ---
+quality: medium
+author:
 date: 2018-08-11
 draft: false
-author:
 title: "10 Principles for Clean Code"
 description: "10 Principles for learning the art of writing clean code."
 tags: ['clean code', 'coding']
 categories: ['coding']
 toc: true
-fresh: false
 
 ---
 
 The ultimate goal is code that is easy to read, understand, and maintain. It's code that doesn't require tons of comments because it's so expressive on it's own. 
 
-##   1. **Stay DRY**
+##   1. Stay DRY
 
 **DRY**: Don't Repeat Yourself
 
-##   2. **Be TED**
+##   2. Be TED
 
 **TED**: Terse, Expressive, Do One Thing
 
-## 3.  **Name things carefully**
+## 3.  Name things carefully
 
 * Watch out for 'And', 'If', and 'Or' in your names, they indicate you're doing multiple things that could be separated.
 
@@ -48,7 +48,7 @@ if(nice) {
 }
 ```
 
-## 6. **Keep things short**
+## 6. Keep things short
 There are recommended maximum lengths for all of these.
 
 * Variable Names
@@ -145,7 +145,7 @@ if(x > 20) {
 }
 ```
 
-## 10. **Use Enums**
+## 10. Use Enums
 
 Enums provide a mechanism for giving meaning to arbitrary data. Enums may not be part of the language you work with, but you can at least emulate their behavior. 
 
@@ -164,7 +164,7 @@ if(user.accountLevel > accountLevels.standard) {
 
 ## References and Further Learning: 
 
-- [Clean Code Cheat Sheet](https://www.bbv.ch/images/bbv/pdf/downloads/V2_Clean_Code_V3.pdf)
+- [Clean Code Cheat Sheet](https://dokk.org/library/Clean_Code_Cheat_Sheet_v2.4_(Enzler_2014))
 - [Uncle Bob's Clean Code](https://www.safaribooksonline.com/live-training/courses/clean-code/0636920194538)
 - This post was based largely on Cory's course [Writing Clean Code For Humans](https://www.pluralsight.com/courses/writing-clean-code-humans)
 

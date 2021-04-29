@@ -1,13 +1,13 @@
 ---
+quality: medium
+author:
 date: 2018-08-28T06:53:20-04:00
 draft: false
-author: 
 title: "Async vs Concurrency"
 description: Comparing JavaScript async with Go's goroutines
 tags: ['golang', 'ecmascript', 'async', 'concurrency']
 categories: ['async', 'concurrency']
 toc: true
-fresh: false
 
 ---
 
@@ -27,7 +27,7 @@ I spent some time recently considering how JavaScript's asynchronous execution c
 >
 > [Webster's Dictionary](https://www.merriam-webster.com/dictionary/sequential)
 
-Code is read and executed in sequence, from the top of the file to the bottom. That does not mean that one line of code must finish execution before the next line of code can be read. But it does imply an order of operations. Obviously this code will produce the numbers 1 to 4 in order. 
+Code is read and executed in sequence, from the top of the file to the bottom. That does not mean that one line of code must finish execution before the next line of code can be read. But it does imply an order of operations. Obviously this code will produce the numbers 1 through 4 in order. 
 
 ```js
 console.log(1);
@@ -72,7 +72,7 @@ main();
 >
 > [Webster's Dictionary](https://www.merriam-webster.com/dictionary/asynchronous)
 
-Again, the dictionary definition isn't helpful. To use the HTML page example, when the HTML is being parsed and a ``<script src="script.js" async></script>`` (notice `async`) tag is encountered. The script will <u>not</u> prevent the HTML from being parsed. Instead, the browser will begin downloading the script while simultaneously parsing the HTML. Then, once the download has completed the script will be executed. So `async` refers to the ability continue performing one task, while waiting for another task to finish. That other task is commonly one that the application doesn't mange, like a database request, or downloading a remote resource, but it doesn't necessarily have to be. So asynchronous code is continuing to do work while waiting for something else to happen. Promises,  async/await, and generators can all be used to write asynchronous JavaScript. 
+Again, the dictionary definition isn't helpful. To use the HTML page example, when the HTML is being parsed and a ``<script src="script.js" async></script>`` (notice `async`) tag is encountered. The script will <u>not</u> prevent the HTML from being parsed. Instead, the browser will begin downloading the script while simultaneously parsing the HTML. Then, once the download has completed the script will be executed. So `async` refers to the ability continue performing one task, while waiting for another task to finish. That other task is commonly one that the application doesn't manage, like a database request or downloading a remote resource, but it doesn't necessarily have to be. So asynchronous code is continuing to do work while waiting for something else to happen. Promises,  async/await, and generators can all be used to write asynchronous JavaScript. 
 
 ```js
 const getUser = async name => {

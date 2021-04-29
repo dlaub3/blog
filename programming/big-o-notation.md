@@ -1,19 +1,19 @@
 ---
+quality: medium
+author:
 date: 2018-08-11T00:00:01
 draft: false
-author:
-title: "Big O"
+title: "Big-O"
 description: "A basic overview of Big-O Notation"
-tags: ['big O', 'algorithms']
+tags: ['big-O', 'algorithms']
 categories: ['engineering']
 toc: false
-fresh: false
 
 ---
 
-Big O notation is used to  mathematically describe the runtime and memory usage required for an algorithm to process data.
+Big-O notation is used to  mathematically describe the runtime and memory usage required for an algorithm to process data.
 
-Since Big O is a mathematical expression, it's helpful to brush up on your math skills when studying big O. I recommend [Kahn Academy](https://www.khanacademy.org) for this. 
+Since big-O is a mathematical expression, it's helpful to brush up on your math skills when studying big-O. I recommend [Kahn Academy](https://www.khanacademy.org) for this. 
 
 O(1) - Will always run in the same amount of time regardless of the amount of data it's processing. 
 
@@ -31,14 +31,14 @@ for level1 in numbers:
       print(result)
 ```
 
-General principles for calculating Big  O are: 
+General principles for calculating Big-O are: 
 
 * Different steps get added
 * Drop constants
 * Different inputs are assigned to different variables
 * Drop non-dominant terms
 
-[Big O Explained](https://www.youtube.com/watch?v=v4cd1O4zkGw)
+[Big-O Explained](https://www.youtube.com/watch?v=v4cd1O4zkGw)
 
 ## Logarithms
 

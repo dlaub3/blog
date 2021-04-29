@@ -1,13 +1,13 @@
 ---
+quality: medium
+author:
 date: 2018-08-11T14:41:27-04:00
 draft: false
-author:
 title: "Common Data Structures"
 description: "An overview of common data structures"
 tags: ['data structures', 'ecmascript']
 categories: ['engineering']
 toc: true
-fresh: false
 
 ---
 
@@ -33,7 +33,7 @@ Trees link data together in a hierarchical way. If you picture a family tree in 
 
 ## Tries
 
-Tries are a type of tree. They are often used for fast word lookup like word completion while your typing. [Tries](https://www.youtube.com/watch?v=zIjfhVPRZCg) 
+Tries are a type of tree. They are often used for fast word lookup such as word completion when typing. [Tries](https://www.youtube.com/watch?v=zIjfhVPRZCg) 
 
 ## Hash
 

@@ -1,13 +1,13 @@
 ---
+quality: medium
+author:
 date: 2018-09-03
 draft: false
-author:
 title: "Observer Design Pattern"
 description: Implementing the observer design pattern.
 categories: ["engineering"]
 tags: ["ecmascript"]
 toc: false
-fresh: false
 
 ---
 

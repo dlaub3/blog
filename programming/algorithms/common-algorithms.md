@@ -1,13 +1,14 @@
 ---
+quality: medium
+author:
+quality: medium
 date: 2018-08-11
 draft: false
-author:
-title: "Common Algorithms"
-description: "An overview of common search and sort algorithms"
+title: Common Algorithms
+description: An overview of common search and sort algorithms
 tags: ['algorithms', 'ecmascript']
 categories: ['engineering']
 toc: true
-fresh: false
 
 ---
 
@@ -88,7 +89,7 @@ function selectionSort(array) {
 ```
 
 ### Merge Sort 
-Merge sort is great large nearly sorted data sets. A merge sort iteratively haves the data set and then resembles it in sorted order. 
+Merge sort is great for large nearly sorted data sets. A merge sort iteratively haves the data set and then resembles it in sorted order. 
 
 ```js
 function mergeSort(array) {

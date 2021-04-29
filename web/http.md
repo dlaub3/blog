@@ -1,13 +1,13 @@
 ---
+quality: medium
+author:
 draft: false
 date: 2018-08-28
-author:
 title: "Understanding HTTP"
 description: A quick introduction to the HTTP specification
 tags: ['http', 'http/2']
 categories: ['web']
 toc: true
-fresh: false
 
 ---
 
@@ -29,7 +29,7 @@ This means that HTTP is an application layer protocol. It is a protocol that the
 
 ## HTTP/1.1
 
-The HTTP protocol specifies how messages should be formatted for communication between the client (browser), and the server.  It's possible to see some of this information in the request and response headers in a browsers networking tools. But an even easier way is to use a tool called [curl](https://curl.haxx.se/). 
+The HTTP protocol specifies how messages should be formatted for communication between the client (browser), and the server.  It's possible to see some of this information in the request and response headers in a browser's networking tools. But an even easier way is to use a tool called [curl](https://curl.haxx.se/). 
 
 This command will display the HTTP headers and the HTML body of the response. 
 

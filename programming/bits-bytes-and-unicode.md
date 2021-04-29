@@ -1,24 +1,29 @@
 ---
-date: 2018-07-29T19:13:07-04:00
+quality: medium
+author: 
+date: 2018-07-29
 draft: false
-author:
 title: Bits, Bytes, and Unicode
 description: What is ASCII, UTF-8, and Unicode
 tags: ['unicode', 'utf-8']
 categories: ['encoding']
 toc: false
-fresh: false
 
 ---
 
+## Bit
 A **bit** is the smallest unit in computing. It is either a `1` or a `0` . Next up is a **byte**,  a byte is 8 bits. 256 (2^8) patterns can be represented by a byte. One byte can store the numbers 0 through 255 in decimal notation. The number 255 is `11111111` and is 8 bits, one byte in length. 
 
+## ASCII
 **ASCII** (American Standard Code for Information Interchange) is the first encoding standard. It is able to represent 128 characters. This is because ASCII uses a 7-bit encoding. It contains the English letters A-Za-z, numbers 0-9, and some special characters as well. So a single byte is able to store an ASCII character. HTML 4.0 defaulted to ASCII. 
 
-**UTF-8** (Unicode Transformation Format )  is backwards compatible with ASCII. It essentially takes the 7-bit ASCII  encoding and expands it with more bits, and is thus able to represent more characters. UTF-8 characters can be from 1 to 4 bytes long. So UTF-8 uses a 16-bit encoding.  It is capable of representing all of Unicode with the ability to represent 2^21 characters. HTML5 defaults to using UTF-8. 
+## UTF-8
+**UTF-8** (Unicode Transformation Format)  is backwards compatible with ASCII. It essentially takes the 7-bit ASCII  encoding and expands it with more bits, and is thus able to represent more characters. UTF-8 characters can be from 1 to 4 bytes long. So UTF-8 uses a 16-bit encoding.  It is capable of representing all of Unicode with the ability to represent 2^21 characters. HTML5 defaults to using UTF-8. 
 
+## Unicode
 **Unicode** is a character set that represents almost all the characters in the world. 
 
+## Encoding
 **Encoding** is how the characters are translated into bits.  It's the 1 and 0 representation. 
 
 > **Encoding** translates numbers into binary. **Character sets** translates characters to numbers.
@@ -31,7 +36,7 @@ It is important to understand the relationship between encoding and character se
 
 The '8' in UTF-8 refers to the fact that 8 is the minimum number of  bits required to store a character. Remember UTF-8 uses 1-4 bytes.
 
-References 
+## References 
 
 - https://web.stanford.edu/class/cs101/bits-bytes.html
 - http://www.unicode.org/faq/utf_bom.html

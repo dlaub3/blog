@@ -1,13 +1,13 @@
 ---
+quality: medium
+author: 
 date: 2018-07-28
 draft: false
-author:
 title: "Practical Python Primer"
 description: "Basic Python language mechanics"
 tags: ["python", "language basics"]
 categories: ["python"]
 toc: true
-fresh: false
 
 ---
 
@@ -27,7 +27,7 @@ Python was developed by Dutch mathematician Guido van Rossum who  is still the p
 * Errors should never pass silently.
 * Unless explicitly silenced.
 * In the face of ambiguity, refuse the temptation to guess.
-* There should be one-- and preferably only one --obvious way to do it.
+* There should be one (and preferably only one) obvious way to do it.
 * Although that way may not be obvious at first unless you're Dutch.
 * Now is better than never.
 * Although never is often better than *right* now.
@@ -380,7 +380,7 @@ def say(*args):
 
 ## Generators 
 
-A special function that us used to create a series of values.
+Generators are a special type of function that is used to create a series of values.
 
 ```python
 def generator(*args):
@@ -589,7 +589,7 @@ readBin = open('img.jpg', 'rb')
 writeBin = open('img-copy.jpg', 'wb')
 
 while True:
-    buf = readBin.read(10240) # memory use at a time
+    buf = readBin.read(10240) # available memory to use 
     if buf: 
         writeBin.write(buf)
         print('.', end='', flush=True)

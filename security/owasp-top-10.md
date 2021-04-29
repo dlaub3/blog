@@ -1,13 +1,13 @@
 ---
+quality: medium
+author:
 date: 2018-08-19T15:20:10-04:00
 draft: false
-author:
 title: "2017 OWASP Top 10"
 description: The 10 most critical security vulnerabilities in 2017. 
 tags: ['owasp', 'owasp top 10']
 categories: ['security']
 toc: true
-fresh: false
 
 ---
 
@@ -35,11 +35,11 @@ Systems generally limit what users can and can't do. But if that system is broke
 
 ## Security Misconfiguration
 
-You may be getting the idea by now that a false sense of security is worse than an awareness of existing insecurity. So you thought you thought did everything right to secure your server. But whoops you let IPV6 wide open, even though you secured IPV4 like Fort Knox. 
+You may be getting the idea by now that a false sense of security is worse than an awareness of existing insecurity. So you thought you did everything right to secure your server. But, whoops, you let IPV6 wide open; even though you secured IPV4 like Fort Knox. 
 
 ## Cross Site Scripting (XSS) 
 
-Cross site scripting happens when an attacker is able to inject malicious  JavaScript into your website, or maybe it's just a malicious website  to begin with. Whatever the case, that JavaScript executes in the users browser and performs operations on their behalf. Cross site request forgery (CSRF) is a type of XSS. In this scenario a script might purchase something from another website that you left, but are still logged into.   That's why you should always use CSRF tokens for validation. Note: XSS is a good reason to be picky when using node modules ;) . 
+Cross site scripting happens when an attacker is able to inject malicious  JavaScript into your website, or maybe it's just a malicious website  to begin with. Whatever the case, that JavaScript executes in the users browser and performs operations on their behalf. Cross site request forgery (CSRF) is a type of XSS. In this scenario a script might purchase something from another website that you left, but are still logged into.   That's why you should always use CSRF tokens for validation. Note: XSS is a good reason to be picky when using node modules, so that you don't inadvertently add malicious code to your JS bundle. ;). 
 
 ## Insecure Deserialization 
 
@@ -61,7 +61,7 @@ https://www.cvedetails.com
 >
 > [OWASP](https://www.owasp.org/images/7/72/OWASP_Top_10-2017_%28en%29.pdf.pdf)
 
-You should have good logging and altering in place so attacks are caught before an exploit actually takes place. 
+You should have good logging and monitoring in place so attacks are caught before an exploit actually takes place. 
 
 In the security world there is the concept of [defense in depth](https://en.wikipedia.org/wiki/Defense_in_depth_(computing)) . You can use this methodology to help secure your system. 
 

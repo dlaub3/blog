@@ -1,13 +1,13 @@
 ---
+quality: medium
+author:
 date: 2018-08-12
 draft: false
-author:
 title: "Database Families"
 description: "A brief overview of different families of databases"
 tags: ['sql', 'database', 'nosql']
 categories: ['database']
 toc: true
-fresh: false
 
 ---
 
@@ -19,7 +19,7 @@ SQL databases are similar to excel spread sheets. They use tables to organize da
 
 ## NoSQL
 
-NoSQL databases do not require data to be stored in columns and rows. Instead data is stored as more of an object. For example, in a users table one user may have a field called address, and another user may have a field called phone number. The users are not required to have the same fields as in an SQL database. Because of this flexibility big data solutions rely on NoSQL databases because the database schema is not known ahead of time. Another reason NoSQL is popular for big data is because NoSQL database scale horizontally very well.  However, there are now more options for SQL database that scale horizontally, like [CockroachDB](https://www.cockroachlabs.com/) . One downside to NoSQL databases is the lack ability to join tables. If you wanted a table join, you would have to write application code to create the join.
+NoSQL databases do not require data to be stored in columns and rows. Instead data is stored as more of an object. For example, in a users table one user may have a field called address, and another user may have a field called phone number. The users are not required to have the same fields as in an SQL database. Because of this flexibility big data solutions rely on NoSQL databases because the database schema is not known ahead of time. Another reason NoSQL is popular for big data is because NoSQL databases scale horizontally very well.  However, there are now more options for SQL database that scale horizontally, like [CockroachDB](https://www.cockroachlabs.com/). One downside to NoSQL databases is the lack ability to join tables. If you wanted a table join, you would have to write application code to create the join.
 
 ## Key/Value Stores
 

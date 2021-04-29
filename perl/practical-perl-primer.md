@@ -1,14 +1,13 @@
 ---
+quality: medium
+author:
 date: 2018-07-22
 draft: false
-author:
 title: "Practical Perl Primer"
-description: "An intro to the Perl"
+description: "An intro to Perl"
 tags: ["perl", "language basics"]
 categories: ['perl']
 toc: true
-fresh: false
-
 
 ---
 
@@ -65,9 +64,9 @@ sub main {
 ## Assignment Examples 
 
 ```perl
-my ( $x, $y, $z ) = ( 1, 2, 3 ); # assign multiple scalar variables from a list
+my ($x, $y, $z) = (1, 2, 3); # assign multiple scalar variables from a list
 
-my @array = ( 1, 2, 3); # create an array from a list
+my @array = (1, 2, 3); # create an array from a list
 
 my $count = @array; # assign the length of the array
 ```
@@ -84,7 +83,7 @@ use strict;
 my $var = 20; 
 
 sub func {
-  # $var scope is locally to code block
+  # $var is scoped locally to the code block
   my $var = 5;
 }
 
@@ -97,17 +96,18 @@ if ($num > 3) {
   # $num can be used here 
   $num = $num + $num2;
 }
-# $num2 is out of variable scope
+# $num2 is out of scope
 say $num2;
 ```
 
 ## Logical Values 
 
+https://perlmaven.com/boolean-values-in-perl
+
 ```perl
 # false values: '', 0, []  in general things that are empty or evaluate to 0
 # everything else evaluates to true
 # this is because of Perl's duck typing.
-https://perlmaven.com/boolean-values-in-perl
 ```
 
 ## Strings
@@ -141,9 +141,9 @@ my $item = pop @array;
 say foreach @array[1...5];
 my @arr2 = @array[1,6,3];
 
-$ref = [1,2,3]; # create a reference to an anonymous array.
-my @arr = qw( one, two, three, four );
-my $ref = \@array;
+my $ref = [1,2,3]; # create a reference to an anonymous array.
+my @array = qw( one, two, three, four );
+my $ref = \@array; # create a reference to a named array.
 say foreach @{$ref}; # dereference the reference into the array it references
 
 ```
@@ -172,7 +172,7 @@ my %hash = (
 while ( my ($k, $v) = each %hash ) {
   say "$k -> $v";
 }
-## reference an anonymous function
+
 foreach my $k (sort(keys %hash)) {
   my $v = $hash{$k};
   say "$k -> $v";
@@ -198,7 +198,7 @@ sub PIE { 3.1415 };
 
 # Perl 5.10 + support static variables 
 use feature 'state';
-state $n = 10; # static variable will not be garbage collected for the entire runtime of the script. So if you use it in a function, consecutive function calls will remember the value.
+state $n = 10; # Static variables will not be garbage collected for the entire runtime of the script. If you use it in a function, consecutive function calls will remember the value.
 ```
 
 ## Conditionals 
@@ -411,24 +411,24 @@ if ( wantarray() ) {
 
 ```perl
 # string replacement
-my $s = qq{I am a string with -- words and :: other characters};
-$s =~ s/:/-/g;
-say $s;
+my $test = qq{I am a string with -- words and :: other characters};
+$test =~ s/:/-/g;
+say $test;
 
 # string search
-my $s = "this is a line"
+my $test = "this is a line"
 my $re = qr/line/;
-say $s =~ $re ? "True" : "False";
+say $test =~ $re ? "True" : "False";
 
-if ( $s =~ /line/i ) {
+if ($test =~ /line/i) {
 }
  
 # extract a match 
 my $match =~ /(line)/;
 
 # extract list of matches
-my $s = "this is a string";
-my @match = $s =~ /i(.)/g;
+my $test = "this is a string";
+my @match = $test =~ /i(.)/g;
 
 # . 1 character
 # + 1 or more 
@@ -461,7 +461,7 @@ if ( wantarray() ) {
 }
 # Function names have global scope and they can be called before they are defined in a script.
 # Functions always return. Either explicitly by calling return or the last statement executed will be implicitly returned. It's recommended to always explicitly return
-# Perl supports closures and higher order functions and is considered a functional programming languages. 
+# Perl supports closures and higher order functions and is considered a functional programming language. 
 # https://hop.perl.plover.com/
 # http://www.perlmonks.org/?node_id=450922
 
@@ -483,22 +483,22 @@ sub say {
 }
 
 # function references 
-my $ref = \&amp;func;
+my $ref = \&func;
 
 sub func {
     say "This is a func";
 }
 
 #either works
-&amp;{$ref}();
-$ref-&gt;();
+&{$ref}();
+$ref->();
 
 my $ref = sub { say "anonymously, yours"};
-$ref-&gt;();
+$ref->();
 
 # reference an anonymous function  
 my $ref = func();
-$ref-&gt;();
+$ref->();
 
 sub func {
 	# This is a closure in Perl.
@@ -510,9 +510,9 @@ sub func {
 ## References 
 
 ```perl
-# References are smaller pieces of memory refer to larger pieces of memory. They are useful for working with arrays, hashes, and functions.
+# References are smaller pieces of memory that refer to larger pieces of memory. They are useful for working with arrays, hashes, and functions.
 
-my @arr = qw( one, two, three, four );
+my @array = qw( one, two, three, four );
 my $ref = \@array;
 say foreach @{$ref}; # dereference the reference into the array it references
 
@@ -521,35 +521,35 @@ my $ref = [qw( one, two, three, four )];
 
 # parenthesis alone create an anonymous list 
 $ref = ( one, two, three, four );
-$ref-&gt;[0];
+$ref->[0];
 
 # create anonymous hash reference 
 my $ref = {
-    one =&gt; "one",
-    two =&gt; "two"
+    one => "one",
+    two => "two"
 };
 
 # access element
 ${$ref}{one}
-$ref-&gt;{one}
+$ref->{one}
 
 # function references 
-my $ref = \&amp;func;
+my $ref = \&func;
 
 sub func {
     say "This is a func";
 }
 
 # either works
-&amp;{$ref}();
-$ref-&gt;();
+&{$ref}();
+$ref->();
 
 my $ref = sub { say "anonymously, yours"};
-$ref-&gt;();
+$ref->();
 
 # reference an anonymous function 
 my $ref = func();
-$ref-&gt;();
+$ref->();
 
 sub func {
 	# this is a closure in Perl.
@@ -568,13 +568,13 @@ say ref($r);
 ```perl
 # Perl reads files as a stream 
 
-# &lt; read
+# < read
 # + read and overwrite 
-# &gt;&gt; append 
+# >> append 
 
 my $filename = "about.txt";
-open (my $fh, '&lt;&#039;, $filename ) or die &quot;Can&#039;t open file: $!&quot;;
-while (my $line =  ) {
+open (my $fh, '<', $filename ) or die "Can't open file: $!";
+while (my $line = <$fh>) {
     chomp $line; # chomp is great for getting line endings correct for your OS 
     say $line;
 }
@@ -591,13 +591,9 @@ use warnings;
 use IO::File;
 
 my $filename = 'lines.txt';
-my $file = IO::File-&gt;new("getline()) {
-    print $line;
-}
-say "Done";
+my $file = IO::File->new($filename, "r")
 
 # Binary Files 
-
 use 5.18.0;
 use warnings;
 use IO::File;
@@ -605,15 +601,15 @@ use IO::File;
 my $filename = 'pic.jpg';
 my $copyfilename = 'copypic.jpg' 
 
-my $file = IO::File-&gt;new("new("&gt; $copyfilename") or die "Cannot open output file $!";
+my $file = IO::File->new($copyfilename, "r") or die "Cannot open output file $!";
 
 # binmode is for Windows mostly, it doesn't hurt anything if not needed.
-$file-&gt;binmode;
-$copy-&gt;binmode;
+$file->binmode;
+$copy->binmode;
 
 my $buffer;
-while (my $len = $file-&gt;read($buffer, 102400)) {
-    $copy-&gt;print($buffer);
+while (my $len = $file->read($buffer, 102400)) {
+    $copy->print($buffer);
 }
 
 say "Done";
@@ -621,14 +617,15 @@ say "Done";
 
 ## Built In Functions 
 
+https://perldoc.perl.org/index-functions-by-cat.html
+
 ```perl
-# https://perldoc.perl.org/index-functions-by-cat.html
 # string functions 
 say()   # say outputs a new line at the end of the output Perl 5.10+
 print() # print and say default to standard stream for their output 
 
 my @a = (1, 2, 3, 4);
-my %h = (one =&gt; 1, two =&gt; 2, three =&gt; 3);
+my %h = (one => 1, two => 2, three => 3);
 
 say join ', ', @a, %h;
 
@@ -702,8 +699,8 @@ foreach ($mon, $mday, $hour, $min, $sec) {
 
 sub number {
     my $self = shift;
-    $self-&gt;{number} = shift if @_;
-    return $self-&gt;{number} || 0;
+    $self->{number} = shift if @_;
+    return $self->{number} || 0;
 }
 
 sub version {
@@ -712,8 +709,6 @@ sub version {
 }
 
 1; # for compatibility, end with a true value
-
-## End example module Simple.pm 
 ```
 
 ## Best Practices 
@@ -733,11 +728,11 @@ CONSTANT_NAME
 # use constants wherever you would use them in another language 
 
 use constant {
-    TRUE =&gt; 1,
-    FALSE =&gt; ""
+    TRUE => 1,
+    FALSE => ""
 };
 
-use constant DEBUG =&gt; TRUE;
+use constant DEBUG => TRUE;
 
 sub func_name { .... }
 
@@ -756,7 +751,7 @@ use feature 'say';
 
 say "This is your last chance. What will it be, the red pill or the blue?";
 say '...';
-my $answer = ;
+my $answer = readline;
 chop $answer;
 if ($answer =~ /blue/i) {
 	say "The story is ends here for you.";

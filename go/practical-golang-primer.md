@@ -1,13 +1,13 @@
 ---
-date: 2018-08-18
-draft: false
+quality: low
 author: 
+date: 2018-08-18
+draft: true
 title: "Practical Golang Primer"
-description: Some basic golang examples
+description: Golang basics 
 tags: ['golang', 'language basics']
 categories: ['golang']
 toc: true
-fresh: false
 
 ---
 
@@ -30,7 +30,6 @@ https://golang.org/pkg/builtin
 - no structured exception handling
 - no implicit numeric conversions, type conversions are specific
 - designed based on C, C++, C#, Pascal/Modula/Oberon
-- is well suited to function programming
 
 ## Syntax
 
@@ -52,7 +51,7 @@ godoc fmt //documentation for fmt
 godoc fmt.Println //documenation for fmt.Println
 go help test //documentation for tesing
 
-gofmt format gocode // auto format code
+gofmt file.go // format code
 ```
 
 ## Project structure
@@ -109,7 +108,7 @@ import (
 // 	first statement must be package name
 // 	executable(program) commands must always use package main
 // 	other packages follow a convention
-//	* match filename aka last part of import path
+//	* match filename - last part of import path
 //	* single word
 //	* lowercase
 
@@ -132,9 +131,9 @@ func main() {
 
 https://golang.org/pkg/go/types/#BasicKind
 
-The `int`, `uint`, and `uintptr` types are usually 32 bits wide on 32-bit systems and 64 bits wide on 64-bit. 
+> The int, uint, and uintptr types are usually 32 bits wide on 32-bit systems and 64 bits wide on 64-bit systems. When you need an integer value you should use int unless you have a specific reason to use a sized or unsigned integer type. 
+> https://tour.golang.org/basics/11
 
-When you need an integer value you should use `int` unless you have a specific reason to use a sized or unsigned integer type. Go is statically typed so you have to set the type. You can set the type explicitly or implicitly.
 
 ```go
 // Explicit typing
