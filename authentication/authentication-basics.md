@@ -48,7 +48,7 @@ As you can see, that would be a very bad experience for users.
 ### Authentication Database 
 Storing the users authentication data in a database is one way to overcome the limitations of server side sessions. In this scenario a user will login on server #1 and server #1 will store the authentication details in the database. 
 Now a subsequent request may be handled by server #2. Server #2 will check the database to see if the user is logged in and find the data that was stored by server #1. So now the application may be scaled horizontally as well as vertically. 
-However, the bottleneck for scalability is now the authentication database since every server must query it for authentication. 
+However, the bottleneck for scalability is now the authentication database since every server must query it for authentication. This is also a single point of failure; if the database goes down, no one can login. 
 
 Here is a link to a great course on this technique: https://www.linkedin.com/learning/php-managing-persistent-sessions
 
@@ -59,8 +59,7 @@ A JWT is a string of characters like this `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.
 Auth0 (zero not O) is a company/service that handles the implementation details of authentication for you. As you can see on the company website they offer Single Sign On, Multi-Factor Authentication and more.
 
 OAuth and OpenID Connect are authentication protocols that allow you to use your login for one website to login to another website. It's the technology that allows you to login to so many other websites using only your GitHub credentials.
-
-{{<youtube 996OiexHze0>}}
+This is a great video on that subject: https://www.youtube.com/watch?v=996OiexHze0
 
 ## Security
 In this article I've assumed that cookies will be used for authentication. Cookies are vulnerable to XSS attacks such as CSRF. You can mitigate this by setting the cookie attributes `SameSite`, `Secure`, and `HttpOnly`.
