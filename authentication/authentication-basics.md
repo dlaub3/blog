@@ -45,7 +45,7 @@ If the user is authenticated the server will allow them to see content that woul
 
 Cons:
 One limitation of this method is that the cache is stored on a single server. If there is a lot of traffic the server will struggle to handle all of the requests, slow down, and possibly crash. 
-The only way to improve the servers performance is to upgrade physical components like RAM and CPU. This is called vertical scaling(in contrast to horizontal scaling which involves adding more servers to help share the load). 
+The only way to improve the server's performance is to upgrade physical components like RAM and CPU. This is called vertical scaling(in contrast to horizontal scaling which involves adding more servers to help share the load). 
 If you tried to combine server side sessions with horizontal scaling a user may login on server #1, but the next request may be handled by server #2, which the user hasn't logged into. When that happens server #2 will ask the user to login again. 
 As you can see, that would be a very bad experience for users.
 
@@ -76,13 +76,13 @@ OAuth and OpenID Connect are authentication protocols that allow you to use your
 This is a great video on that subject: https://www.youtube.com/watch?v=996OiexHze0
 
 ## Security
-In this article I've assumed that cookies will be used for authentication. Cookies are vulnerable to XSS attacks such as CSRF. You can mitigate this by setting the cookie attributes `SameSite`, `Secure`, and `HttpOnly`.
+In this article I've assumed that cookies will be used for authentication. Cookies are vulnerable to XSS(Cross Site  Scripting) and CSRF(Cross Site Request Forgery). You can mitigate this by setting the cookie attributes `SameSite`, `Secure`, and `HttpOnly`.
 
 - `SameSite=Strict` the cookie will not be sent with requests initiate by a third party website
 - `Secure` the cookie will only be sent over secure HTTPS connections
 - `HttpOnly` the cookie cannot be accessed with JavaScript
 
 ## Summary
-In most scenarios you won't be required to implement authentication yourself. You’ll just need a basic understand of how it works and the trade-offs between various methods. 
+In most scenarios you won't be required to implement authentication yourself. You’ll just need a basic understanding of how it works and the trade-offs between various methods. 
 You’ll also need to understand the security risks and how authentication can be compromised. 
 
