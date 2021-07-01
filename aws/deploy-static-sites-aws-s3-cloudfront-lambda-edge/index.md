@@ -90,7 +90,7 @@ Now navigate to Certificate Manager, request a certificate, and add the DNS vali
 
 ## CloudFront
 
-Create an configure a new CloudFront distribution. 
+Create and configure a new CloudFront distribution. 
 
 {{<imgproc create-cloudfront>}}Create a new CloudFront distribution.{{</imgproc>}}
 
