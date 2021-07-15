@@ -5,6 +5,7 @@ description: Learn how to deploy static sites to AWS with S3, Lambda@Edge, and C
 draft: false
 categories: [aws]
 tags: [aws]
+series: deploying-static-sites
 toc: true
 
 ---
@@ -33,6 +34,8 @@ There are many tools and services for hosting static websites.
     are just deploying your blog then you have absolutely no way to justify this option; 
     it's simply a more advanced exercise in learning AWS than the previous options. 
 
+
+**Note**: The AWS UI may has changed since this article was published
 
 ## IAM User
 
@@ -130,7 +133,7 @@ entry as follows:
 - Your Identities: [Your newly created OAI]
 - Grant Read Permissions on Bucket: No, I Will Update Permissions
 
-{{<imgproc configure-origin-access>}}Create a new OAI.{{</imgproc>}}
+{{<imgproc configure-origin-access>}}Set CloudFront OAI{{</imgproc>}}
 
 Update the following policy with your bucket name and OAI policy ID.
 You'll need to use your actual bucket name here: `"Resource": "arn:aws:s3:::<EXAMPLE.COM>/*"`.
@@ -326,7 +329,7 @@ of the S3 bucket named example.com.
 
 ```bash
 # sync files to S3
-aws s3 sync public/ s3://example.com/prod/public \
+aws s3 sync public/ s3://<BUCKET_NAME>/prod/public \
   --delete \
   --exclude "*" \
   --include "*.html"
@@ -334,7 +337,7 @@ aws s3 sync public/ s3://example.com/prod/public \
  
 ```bash
 # set cache-control headers
-aws s3 sync public/ s3://example.com/prod/public \
+aws s3 sync public/ s3://<BUCKET_NAME>/prod/public \
   --delete \
   --exclude "*" \
   --include "*.js" \
