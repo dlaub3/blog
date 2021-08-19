@@ -1,5 +1,5 @@
 ---
-title: "Architecture"
+title: "System Design"
 draft: false
 ---
 

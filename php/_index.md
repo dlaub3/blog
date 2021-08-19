@@ -1,5 +1,5 @@
 ---
-title: "PHP Notes"
+title: "PHP"
 draft: false
 
 ---

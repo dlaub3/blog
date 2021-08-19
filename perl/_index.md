@@ -1,4 +1,4 @@
 ---
-title: "Perl Notes"
+title: "Perl"
 draft: false
 ---
