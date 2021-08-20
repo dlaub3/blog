@@ -1,5 +1,5 @@
 ---
 title: "MySQL"
-draft: false
+draft: true
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: "EcmaScript"
+title: "ECMAScript"
 draft: false
 ---
 

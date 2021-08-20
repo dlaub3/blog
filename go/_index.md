@@ -1,5 +1,5 @@
 ---
 title: "Go"
-draft: false
+draft: true
 ---
 

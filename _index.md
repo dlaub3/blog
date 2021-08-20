@@ -1,5 +1,4 @@
 ---
-title: "Jargon"
+title: "Articles"
 draft: false
 ---
-
