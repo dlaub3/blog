@@ -6,7 +6,7 @@ date: 2018-08-28
 title: "Understanding HTTP"
 description: A quick introduction to the HTTP specification
 tags: ['http', 'http/2']
-categories: ['web']
+categories: ['networking']
 toc: true
 
 ---

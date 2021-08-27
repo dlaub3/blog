@@ -5,8 +5,8 @@ date: 2018-07-29
 draft: false
 title: "CLI Utils"
 description: "Useful CLI Utilities"		
-tags: ["bash", 'linux', 'cli']
-categories: ['bash', 'linux']
+tags: ["bash", "linux"]
+categories: ["cli"]
 toc: true
 
 ---

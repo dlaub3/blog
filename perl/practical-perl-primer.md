@@ -5,8 +5,9 @@ date: 2018-07-22
 draft: false
 title: "Practical Perl Primer"
 description: "An intro to Perl"
-tags: ["perl", "language basics"]
-categories: ['perl']
+tags: ["perl"]
+categories: ["language basics"]
+topic: "perl"
 toc: true
 
 ---
