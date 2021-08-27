@@ -9,7 +9,7 @@ toc: true
 
 ---
 
-{{< demo url="https:://codesandbox.io/s/practical-sound-9ogdl" on="CodeSandbox" >}}
+{{< demo url="https://codesandbox.io/s/practical-sound-9ogdl" on="CodeSandbox" >}}
 
 ## Why Inversion of Control
 
@@ -33,7 +33,7 @@ It is possible to address all of these concerns by passing props into a
 component. But this leads to an ever growing number of props and a great deal of
 complexity in the implementation which makes it difficult to add new features without
 breaking existing ones. The goal of inversion of control is to offload making these decisions 
-to the consumers. This greatly simplifies the component and gives consumers 
+to the consumer. This greatly simplifies the component and gives consumers 
 the flexibility to handle a myriad of use cases while keeping the component 
 implementation clean and light. 
 
