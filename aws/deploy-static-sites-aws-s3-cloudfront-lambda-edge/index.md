@@ -5,7 +5,8 @@ description: Learn how to deploy static sites to AWS with S3, Lambda@Edge, and C
 draft: false
 categories: [aws]
 tags: [aws]
-series: deploying-static-sites
+series: "Deploying Static Sites"
+series_weight: 1
 toc: true
 
 ---
@@ -52,7 +53,8 @@ Note: S3 bucket names are globally unique. It's possible that someone else is al
 - Properties:
  
   - Static Website Hosting: Since the files will be served from CloudFront and not S3 leave this option disabled.
-    {{<imgproc disable-website-hosting>}}Leave static website hosting disabled.{{</imgproc>}}
+    {{<imgproc disable-website-hosting>}}Leave static website hosting 
+    disabled.{{</imgproc>}}
 
 - Permissions:
 

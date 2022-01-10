@@ -5,7 +5,8 @@ description: Learn how to configure a CD pipeline with Jenkins, Docker, Traefik,
 draft: false
 categories: [aws]
 tags: [aws]
-series: deploying-static-sites
+series: "Deploying Static Sites"
+series_weight: 2
 toc: true
 
 ---

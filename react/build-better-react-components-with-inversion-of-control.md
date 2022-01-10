@@ -3,8 +3,9 @@ date: 2021-08-18T22:25:49-04:00
 title: Build Better React Components with Inversion of Control
 description: Learn to use inversion of control to build flexible reusable React components. 
 draft: false
-categories: []
-tags: []
+categories: ["React"]
+tags: ["react"]
+topic: "React"
 toc: true
 
 ---
@@ -101,7 +102,7 @@ close?
 const [toggled, handleToggle] = React.useState("");
 
 <Accordion
-  id={"1"}
+  id={"one"}
   type="controlled"
   onClick={() => handleToggle((cur) => (cur === "one" ? "" : "one"))}
   onKeyDown={() => {
@@ -124,7 +125,7 @@ const [toggled, handleToggle] = React.useState("");
   }}
 </Accordion>
 <Accordion
-  id={"2"}
+  id={"two"}
   type="controlled"
   onClick={() => handleToggle((cur) => (cur === "two" ? "" : "two"))}
   onKeyDown={() => {
