@@ -221,6 +221,8 @@ export function lift<F>(F: Functor<F>): <A, B>(f: (a: A) => B) => (fa: HKT<F, A>
 export function lift<F>(F: Functor<F>): <A, B>(f: (a: A) => B) => (fa: HKT<F, A>) => HKT<F, B> {
   return (f) => (fa) => F.map(fa, f)
 }
+
+// https://gcanti.github.io/fp-ts/guides/HKT.html
 ```
 
 Here is an example of creating a specific `lift` instance by providing a constructor.
@@ -232,6 +234,8 @@ liftIdentity(double)
 
 const liftEither = lift(either)
 liftEither(double)
+
+// https://gcanti.github.io/fp-ts/guides/HKT.html
 ```
 
 ## References
