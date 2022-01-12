@@ -1,6 +1,6 @@
 ---
 date: 2021-12-20T00:00:00-00:01
-title: "Getting Started with fp-ts Part 1: Introduction"
+title: "Getting Started with fp-ts Part I: Introduction"
 description: An fp-ts tutorial for kids who can't fp-ts good and want to learn how to do other stuff good too.
 draft: false
 categories: ["functional programming"]
@@ -30,6 +30,7 @@ to effectively use _fp-ts_.
 
 ## Algebraic Structures
 https://en.wikipedia.org/wiki/Algebraic_structure
+
 An algebraic structure is a structure with a set of operations that may be 
 performed on it. The operations must satisfy specific lawful constraints. 
 Wikipedia lists Magama and Semigroup as examples of algebraic structures. For 
@@ -39,6 +40,7 @@ math.
 
 ## Type Classes
 https://en.wikipedia.org/wiki/Type_class
+
 Functor, Semigroup, Monad, etc., are all examples of type classes. Type classes 
 may inherit from other type classes as the chart below illustrates. Type classes 
 must implement specific lawful operations and are in fact algebraic structures 
@@ -77,11 +79,12 @@ Filterable
                                                 \ /         \ /         \
                                             Alternative    Monad     ChainRec
                                                                     (chainRec)
+//https://github.com/sanctuary-js/sanctuary-type-classes#type-class-hierarchy
 ```
-https://github.com/sanctuary-js/sanctuary-type-classes#type-class-hierarchy
 
 ## ADT (Algebraic Data Type)
 https://en.wikipedia.org/wiki/Algebraic_data_type
+
 A simple example of an algebraic data type:
 ```typescript
 type Foo = 'Bar' | 'Baz'
@@ -99,6 +102,7 @@ etc. These ADTs satisfy the laws of various type classes. For example `Option`,
 
 ## Parametric Polymorphism
 https://en.wikipedia.org/wiki/Parametric_polymorphism
+
 > In programming languages and type theory, parametric polymorphism is a way to 
 > make a language more expressive, while still maintaining full static 
 > type-safety. Using parametric polymorphism, a function or a data type can be 
@@ -114,6 +118,7 @@ const identity<T>(x: T): T => x
 
 ## Ad Hoc Polymorphism
 https://en.wikipedia.org/wiki/Ad_hoc_polymorphism
+
 Ad hoc polymophism refers to a functions that operates differently on different 
 types of parameters. In TypeScript ad hoc polymophism is implemented using 
 function overloading.
@@ -158,6 +163,7 @@ logName(cat)
 
 ## Higher Kinded Types
 https://en.wikipedia.org/wiki/Kind_(type_theory)
+
 If TypeScript supported higher kinded types it wold be possible to write generic 
 types, that receive generic type parameters like this.
 ```typescript
