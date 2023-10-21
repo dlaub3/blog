@@ -1,9 +1,12 @@
 ---
-title: "Read Me"
-date: 2018-07-19T11:35:58+05:30 
-draft: true
+title: "README"
+draft: false
+
 ---
 
-# Readme
+# README
 
-My new blog. 
+Hi. I'm a Software Engineer and this is my blog.
+
+You can disagree with what I say, but you can't argue with me because this site
+doesn't support comments.
