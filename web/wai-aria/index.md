@@ -48,10 +48,6 @@ create custom widgets that are still accessible.
   those changes, ensuring that users of assistive technologies receive the most
   current information.
 
-  The Accessibility Tree serves as an intermediary layer between the content and
-  the assistive technology, filtering and presenting content in a way that makes
-  sense for these tools.
-
 ## ARIA Attributes
 
 ARIA attributes provide a way to enhance the accessibility of web content,
@@ -78,7 +74,7 @@ for individuals with disabilities.
   relationships between elements, even when they aren't adjacent in the DOM,
   such as `aria-controls` or `aria-labelledby`.
 
-  **Examples of Common ARIA Attributes**:
+**Common ARIA Attributes**:
 
 - `aria-hidden`: Indicates whether an element is visible or not to assistive
   technologies.
@@ -92,7 +88,7 @@ for individuals with disabilities.
 - `aria-required`: Specifies if a form input is mandatory before form
   submission.
 
-  **Key Takeaways**:
+**Key Takeaways**:
 
 - **Enhance, Don't Redefine**: ARIA attributes should be used to enhance native
   semantics, not to replace or redefine them.
@@ -104,12 +100,6 @@ for individuals with disabilities.
   the content using screen readers and other assistive tools.
 
 ## ARIA Roles
-
-ARIA roles are a crucial part of the WAI-ARIA web accessibility specification.
-They provide a way to convey the purpose or behavior of an element to assistive
-technologies, enhancing the user experience for people with disabilities.
-
-**What are ARIA Roles?**
 
 ARIA roles are attributes added to elements in your HTML to specify their role
 (or purpose) in the interface, especially when that role might not be evident or
@@ -126,7 +116,7 @@ page. Examples include:
 - `contentinfo` for metadata or information about the site.
 
 **Widget Roles**: Describe common interface elements like sliders, tabs, and
-tooltips. Examples are:
+tooltips. Examples include:
 
 - `button`
 - `checkbox`
@@ -134,7 +124,7 @@ tooltips. Examples are:
 - `progressbar`
 
 **Document Structure Roles**: Indicate structural elements within content or
-containers. Examples are:
+containers. Examples include:
 
 - `article`
 - `heading`
@@ -154,18 +144,23 @@ include:
 
 - **Semantic Enhancement**: Some custom components don't have built-in semantics
 that can be understood by assistive technologies. ARIA roles fill in these
-semantic gaps. - **Improved Screen Reader Experience**: ARIA roles guide screen
+semantic gaps.
+
+- **Improved Screen Reader Experience**: ARIA roles guide screen
 reader output, ensuring users hear more meaningful and context-rich feedback.
+
 - **Custom Component Clarification**: For non-standard UI elements that might be
   ambiguous or unclear, roles provide clarity on their purpose or behavior.
 
-  **Best Practices**:
+**Best Practices**:
 
 - **Don't Override**: Avoid changing the role of an element with a clear native
 semantic meaning unless necessary. For example setting `role="main"` on the
 `main` element is bad practice.
+
 - **Use Supportive Attributes**: Many roles work best when combined with other
 ARIA attributes to define their state or properties.
+
 - **Stay Up To Date**: The ARIA specification evolves. Always refer to the
 latest version to ensure you're implementing roles correctly.
 
@@ -210,15 +205,15 @@ attention, `aria-live="assertive"` could be used to ensure the message is
 announced without delay.
 
 **Important Considerations**:
-Overuse: It's crucial not to overuse `aria-live`, especially with the
+
+- **Overuse**: It's crucial not to overuse `aria-live`, especially with the
 "assertive" value. If changes are announced too frequently or with unnecessary
 urgency, it can be disruptive and confusing for users.
 
-**Complementary Attributes**: Other attributes often used in conjunction with
+- **Complementary Attributes**: Other attributes often used in conjunction with
 `aria-live` include `aria-atomic`, which defines whether the entire region or
-just
-the changed parts should be announced, and aria-relevant, which indicates what
-types of changes should be vocalized.
+just the changed parts should be announced, and `aria-relevant`, which indicates
+what types of changes should be vocalized.
 
 ### `aria-relevant`
 
@@ -242,14 +237,16 @@ The HTML `alt` attributes primary purpose is to provide a text description for
 images, ensuring content remains meaningful and accessible, especially for users
 who rely on screen readers or those with visual impairments.
 
-**When is the `alt` attribute important?**:
+**When is the `alt` attribute important?**
 
 - **Screen Readers**: For visually impaired users, screen readers vocalize the
 content of a page. When they encounter an image, they'll read out the `alt`
 text, providing context and understanding about the image's content or function.
+
 - **No Image Display**: If an image fails to load or if images are turned off in
 a browser, the `alt` text will display in place of the image, informing users
 about what should have been there.
+
 - **SEO Benefits**: Search engines use the `alt` text to understand image
 content, aiding in better indexing and search relevance.
 
@@ -257,8 +254,10 @@ content, aiding in better indexing and search relevance.
 
 - **Descriptive Text**: The `alt` text should be succinct yet descriptive enough
 to convey the image's meaning or function.
+
 - **Functional Images**: For images used as buttons or links, the `alt` text
 should describe the action or destination.
+
 - **Decorative Images**: If an image is purely decorative and adds no content
   value, an empty `alt` attribute (`alt=""`) should be used. This tells screen
   readers to skip over the image.
@@ -360,5 +359,4 @@ is relatively common affecting 1 in 12 men and 1 in 200 women.
 - [Using VoiceOver to Evaluate Web
 Accessibility](http://webaim.org/articles/voiceover/)
 - [Using NVDA to Evaluate Web Accessibility](http://webaim.org/articles/nvda)
-- [HTML5 Accessibility Chops: hidden and
-  aria-hidden](https://www.tpgi.com/html5-accessibility-chops-hidden-and-aria-hidden/)
+- [TPGi Accessible Blog](https://www.tpgi.com/world-of-accessibility/)
